@@ -1,0 +1,16 @@
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe.config
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csprojAssemblyReference.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.LoginForm.resources
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.Properties.Resources.resources
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.GenerateResource.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CoreCompileInputs.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CopyComplete
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.MainForm.resources

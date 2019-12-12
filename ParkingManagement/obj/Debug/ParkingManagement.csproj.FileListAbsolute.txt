@@ -1,0 +1,2 @@
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement\obj\Debug\ParkingManagement.csprojAssemblyReference.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement\obj\Debug\ParkingManagement.csproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingManagement_DAL\ParkingManagement_DAL.csproj" />
+    <ProjectReference Include="..\ParkingManagement_DTO\ParkingManagement_DTO.csproj" />
+  </ItemGroup>
+
+</Project>

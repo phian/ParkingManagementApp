@@ -1,0 +1,14 @@
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.deps.json
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DAL.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DTO.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DAL.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DTO.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csprojAssemblyReference.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csproj.CoreCompileInputs.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.AssemblyInfoInputs.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.AssemblyInfo.cs
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csproj.CopyComplete
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.pdb
