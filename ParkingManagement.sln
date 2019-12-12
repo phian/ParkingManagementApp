@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingManagement_DAL", "ParkingManagement_DAL\ParkingManagement_DAL.csproj", "{B67CBF72-09DC-4FB9-AF55-E6886D730543}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingManagement_BUS", "ParkingManagement_BUS\ParkingManagement_BUS.csproj", "{27C03C37-592E-468F-8853-C53B45B7EA34}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingManagement_DTO", "ParkingManagement_DTO\ParkingManagement_DTO.csproj", "{2B12E662-02CF-4BCD-A7A3-66E5273F1544}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingManagement_GUI", "ParkingManagement_GUI\ParkingManagement_GUI.csproj", "{FC3494FA-4AD8-4AAD-B4E3-24EBE1D3DDD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingManagement_DAL", "ParkingManagement_DAL\ParkingManagement_DAL.csproj", "{02340E8C-453B-455F-BADB-805E63371347}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingManagement_DTO", "ParkingManagement_DTO\ParkingManagement_DTO.csproj", "{C76E07CE-598E-419A-BA47-CB664E28C2F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingManagement_BUS", "ParkingManagement_BUS\ParkingManagement_BUS.csproj", "{713818AC-9CD6-47C8-90B7-365FBDE69346}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B67CBF72-09DC-4FB9-AF55-E6886D730543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B67CBF72-09DC-4FB9-AF55-E6886D730543}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B67CBF72-09DC-4FB9-AF55-E6886D730543}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B67CBF72-09DC-4FB9-AF55-E6886D730543}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27C03C37-592E-468F-8853-C53B45B7EA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27C03C37-592E-468F-8853-C53B45B7EA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27C03C37-592E-468F-8853-C53B45B7EA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27C03C37-592E-468F-8853-C53B45B7EA34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B12E662-02CF-4BCD-A7A3-66E5273F1544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B12E662-02CF-4BCD-A7A3-66E5273F1544}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B12E662-02CF-4BCD-A7A3-66E5273F1544}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B12E662-02CF-4BCD-A7A3-66E5273F1544}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC3494FA-4AD8-4AAD-B4E3-24EBE1D3DDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC3494FA-4AD8-4AAD-B4E3-24EBE1D3DDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC3494FA-4AD8-4AAD-B4E3-24EBE1D3DDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC3494FA-4AD8-4AAD-B4E3-24EBE1D3DDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02340E8C-453B-455F-BADB-805E63371347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02340E8C-453B-455F-BADB-805E63371347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02340E8C-453B-455F-BADB-805E63371347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02340E8C-453B-455F-BADB-805E63371347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76E07CE-598E-419A-BA47-CB664E28C2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76E07CE-598E-419A-BA47-CB664E28C2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76E07CE-598E-419A-BA47-CB664E28C2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76E07CE-598E-419A-BA47-CB664E28C2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713818AC-9CD6-47C8-90B7-365FBDE69346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713818AC-9CD6-47C8-90B7-365FBDE69346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713818AC-9CD6-47C8-90B7-365FBDE69346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713818AC-9CD6-47C8-90B7-365FBDE69346}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
