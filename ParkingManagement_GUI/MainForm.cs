@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ParkingManagement_GUI
 {
-    public partial class MainForm : Form
+    public partial class Staff_Only : Form
     {
-        public MainForm()
+        public Staff_Only()
         {
             InitializeComponent();
         }
+
+      
     }
 }

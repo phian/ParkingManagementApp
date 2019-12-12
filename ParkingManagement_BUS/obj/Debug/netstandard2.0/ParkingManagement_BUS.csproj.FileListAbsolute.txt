@@ -12,3 +12,16 @@ D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csproj.CopyComplete
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.dll
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.pdb
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.deps.json
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.dll
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_BUS.pdb
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DAL.dll
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DTO.dll
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DAL.pdb
+D:\ParkingManagementApp\ParkingManagement_BUS\bin\Debug\netstandard2.0\ParkingManagement_DTO.pdb
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csprojAssemblyReference.cache
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.AssemblyInfoInputs.cache
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.AssemblyInfo.cs
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.csproj.CopyComplete
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.dll
+D:\ParkingManagementApp\ParkingManagement_BUS\obj\Debug\netstandard2.0\ParkingManagement_BUS.pdb

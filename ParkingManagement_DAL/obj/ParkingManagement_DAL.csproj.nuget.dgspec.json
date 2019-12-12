@@ -1,35 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj": {}
+    "D:\\ParkingManagementApp\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj": {}
   },
   "projects": {
-    "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj": {
+    "D:\\ParkingManagementApp\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj",
+        "projectUniqueName": "D:\\ParkingManagementApp\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj",
         "projectName": "ParkingManagement_DAL",
-        "projectPath": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DAL\\obj\\",
+        "projectPath": "D:\\ParkingManagementApp\\ParkingManagement_DAL\\ParkingManagement_DAL.csproj",
+        "packagesPath": "C:\\Users\\HOANG-VINH_PC\\.nuget\\packages\\",
+        "outputPath": "D:\\ParkingManagementApp\\ParkingManagement_DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\HOANG-VINH_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj": {
-                "projectPath": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj"
+              "D:\\ParkingManagementApp\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj": {
+                "projectPath": "D:\\ParkingManagementApp\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj"
               }
             }
           }
@@ -51,32 +50,37 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj": {
+    "D:\\ParkingManagementApp\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj",
+        "projectUniqueName": "D:\\ParkingManagementApp\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj",
         "projectName": "ParkingManagement_DTO",
-        "projectPath": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Phương pháp phần mềm hướng đối tượng\\ParkingManagement\\ParkingManagement_DTO\\obj\\",
+        "projectPath": "D:\\ParkingManagementApp\\ParkingManagement_DTO\\ParkingManagement_DTO.csproj",
+        "packagesPath": "C:\\Users\\HOANG-VINH_PC\\.nuget\\packages\\",
+        "outputPath": "D:\\ParkingManagementApp\\ParkingManagement_DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\HOANG-VINH_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -101,10 +105,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

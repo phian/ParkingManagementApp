@@ -14,3 +14,18 @@ D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.MainForm.resources
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe.config
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.pdb
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.dll
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.dll
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.pdb
+D:\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.pdb
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csprojAssemblyReference.cache
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.LoginForm.resources
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.Properties.Resources.resources
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.GenerateResource.cache
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CopyComplete
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
+D:\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.Staff_Only.resources

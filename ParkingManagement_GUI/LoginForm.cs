@@ -84,7 +84,7 @@ namespace ParkingManagement_GUI
         // event whe user click log in button
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
+            Staff_Only mainForm = new Staff_Only();
 
             this.Hide();
             mainForm.ShowDialog();
