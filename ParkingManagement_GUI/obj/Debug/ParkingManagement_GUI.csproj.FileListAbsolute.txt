@@ -14,3 +14,9 @@ D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.MainForm.resources
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.Video.DirectShow.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.Video.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.xml
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.Video.xml
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\AForge.Video.DirectShow.xml

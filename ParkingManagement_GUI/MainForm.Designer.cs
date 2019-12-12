@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.InputCameraPB = new System.Windows.Forms.PictureBox();
+            this.InVehiclePB = new System.Windows.Forms.PictureBox();
+            this.OutputCameraPB = new System.Windows.Forms.PictureBox();
+            this.OutVehiclePB = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,50 +47,58 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ParkAmountLB = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.StartCameraButton = new System.Windows.Forms.Button();
+            this.CaptureButton = new System.Windows.Forms.Button();
+            this.ClearImgButton = new System.Windows.Forms.Button();
+            this.InputCameraLB = new System.Windows.Forms.Label();
+            this.InVehicleLB = new System.Windows.Forms.Label();
+            this.OutputCameraLB = new System.Windows.Forms.Label();
+            this.OutVehicleLB = new System.Windows.Forms.Label();
+            this.CaptureCB = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutVehiclePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // InputCameraPB
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(22, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 264);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.InputCameraPB.Location = new System.Drawing.Point(22, 53);
+            this.InputCameraPB.Name = "InputCameraPB";
+            this.InputCameraPB.Size = new System.Drawing.Size(274, 264);
+            this.InputCameraPB.TabIndex = 0;
+            this.InputCameraPB.TabStop = false;
             // 
-            // pictureBox2
+            // InVehiclePB
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(329, 53);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 264);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.InVehiclePB.Location = new System.Drawing.Point(329, 53);
+            this.InVehiclePB.Name = "InVehiclePB";
+            this.InVehiclePB.Size = new System.Drawing.Size(274, 264);
+            this.InVehiclePB.TabIndex = 1;
+            this.InVehiclePB.TabStop = false;
             // 
-            // pictureBox3
+            // OutputCameraPB
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(22, 355);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(274, 264);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.OutputCameraPB.Location = new System.Drawing.Point(22, 364);
+            this.OutputCameraPB.Name = "OutputCameraPB";
+            this.OutputCameraPB.Size = new System.Drawing.Size(274, 264);
+            this.OutputCameraPB.TabIndex = 2;
+            this.OutputCameraPB.TabStop = false;
             // 
-            // pictureBox4
+            // OutVehiclePB
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(329, 355);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(274, 264);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.OutVehiclePB.Location = new System.Drawing.Point(329, 364);
+            this.OutVehiclePB.Name = "OutVehiclePB";
+            this.OutVehiclePB.Size = new System.Drawing.Size(274, 264);
+            this.OutVehiclePB.TabIndex = 3;
+            this.OutVehiclePB.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -138,22 +146,6 @@
             this.panel1.Size = new System.Drawing.Size(510, 264);
             this.panel1.TabIndex = 8;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(77, 135);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(333, 135);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
@@ -163,6 +155,22 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(108, 50);
             this.textBox1.TabIndex = 11;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Location = new System.Drawing.Point(333, 135);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(77, 135);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
             // 
             // dateTimePicker1
             // 
@@ -232,11 +240,97 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "đồng";
             // 
+            // StartCameraButton
+            // 
+            this.StartCameraButton.Location = new System.Drawing.Point(619, 355);
+            this.StartCameraButton.Name = "StartCameraButton";
+            this.StartCameraButton.Size = new System.Drawing.Size(94, 50);
+            this.StartCameraButton.TabIndex = 16;
+            this.StartCameraButton.Text = "Start Camera";
+            this.StartCameraButton.UseVisualStyleBackColor = true;
+            this.StartCameraButton.Click += new System.EventHandler(this.StartCameraButton_Click);
+            // 
+            // CaptureButton
+            // 
+            this.CaptureButton.Location = new System.Drawing.Point(619, 412);
+            this.CaptureButton.Name = "CaptureButton";
+            this.CaptureButton.Size = new System.Drawing.Size(94, 50);
+            this.CaptureButton.TabIndex = 17;
+            this.CaptureButton.Text = "Capture";
+            this.CaptureButton.UseVisualStyleBackColor = true;
+            this.CaptureButton.Click += new System.EventHandler(this.CaptureButton_Click);
+            // 
+            // ClearImgButton
+            // 
+            this.ClearImgButton.Location = new System.Drawing.Point(619, 470);
+            this.ClearImgButton.Name = "ClearImgButton";
+            this.ClearImgButton.Size = new System.Drawing.Size(94, 50);
+            this.ClearImgButton.TabIndex = 18;
+            this.ClearImgButton.Text = "Clear Image";
+            this.ClearImgButton.UseVisualStyleBackColor = true;
+            this.ClearImgButton.Click += new System.EventHandler(this.ClearImgButton_Click);
+            // 
+            // InputCameraLB
+            // 
+            this.InputCameraLB.AutoSize = true;
+            this.InputCameraLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InputCameraLB.Location = new System.Drawing.Point(17, 18);
+            this.InputCameraLB.Name = "InputCameraLB";
+            this.InputCameraLB.Size = new System.Drawing.Size(170, 25);
+            this.InputCameraLB.TabIndex = 19;
+            this.InputCameraLB.Text = "Camera ngõ vào";
+            // 
+            // InVehicleLB
+            // 
+            this.InVehicleLB.AutoSize = true;
+            this.InVehicleLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InVehicleLB.Location = new System.Drawing.Point(326, 18);
+            this.InVehicleLB.Name = "InVehicleLB";
+            this.InVehicleLB.Size = new System.Drawing.Size(120, 25);
+            this.InVehicleLB.TabIndex = 20;
+            this.InVehicleLB.Text = "Ảnh xe vào";
+            // 
+            // OutputCameraLB
+            // 
+            this.OutputCameraLB.AutoSize = true;
+            this.OutputCameraLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputCameraLB.Location = new System.Drawing.Point(17, 327);
+            this.OutputCameraLB.Name = "OutputCameraLB";
+            this.OutputCameraLB.Size = new System.Drawing.Size(154, 25);
+            this.OutputCameraLB.TabIndex = 21;
+            this.OutputCameraLB.Text = "Camera ngõ ra";
+            // 
+            // OutVehicleLB
+            // 
+            this.OutVehicleLB.AutoSize = true;
+            this.OutVehicleLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutVehicleLB.Location = new System.Drawing.Point(324, 327);
+            this.OutVehicleLB.Name = "OutVehicleLB";
+            this.OutVehicleLB.Size = new System.Drawing.Size(104, 25);
+            this.OutVehicleLB.TabIndex = 22;
+            this.OutVehicleLB.Text = "Ảnh xe ra";
+            // 
+            // CaptureCB
+            // 
+            this.CaptureCB.FormattingEnabled = true;
+            this.CaptureCB.Location = new System.Drawing.Point(619, 538);
+            this.CaptureCB.Name = "CaptureCB";
+            this.CaptureCB.Size = new System.Drawing.Size(94, 21);
+            this.CaptureCB.TabIndex = 23;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 631);
+            this.ClientSize = new System.Drawing.Size(1234, 641);
+            this.Controls.Add(this.CaptureCB);
+            this.Controls.Add(this.OutVehicleLB);
+            this.Controls.Add(this.OutputCameraLB);
+            this.Controls.Add(this.InVehicleLB);
+            this.Controls.Add(this.InputCameraLB);
+            this.Controls.Add(this.ClearImgButton);
+            this.Controls.Add(this.CaptureButton);
+            this.Controls.Add(this.StartCameraButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ParkAmountLB);
             this.Controls.Add(this.label4);
@@ -245,25 +339,27 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.OutVehiclePB);
+            this.Controls.Add(this.OutputCameraPB);
+            this.Controls.Add(this.InVehiclePB);
+            this.Controls.Add(this.InputCameraPB);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutVehiclePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,10 +367,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox InputCameraPB;
+        private System.Windows.Forms.PictureBox InVehiclePB;
+        private System.Windows.Forms.PictureBox OutputCameraPB;
+        private System.Windows.Forms.PictureBox OutVehiclePB;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -290,5 +386,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label ParkAmountLB;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button StartCameraButton;
+        private System.Windows.Forms.Button CaptureButton;
+        private System.Windows.Forms.Button ClearImgButton;
+        private System.Windows.Forms.Label InputCameraLB;
+        private System.Windows.Forms.Label InVehicleLB;
+        private System.Windows.Forms.Label OutputCameraLB;
+        private System.Windows.Forms.Label OutVehicleLB;
+        private System.Windows.Forms.ComboBox CaptureCB;
     }
 }
