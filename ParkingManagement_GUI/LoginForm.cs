@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ParkingManagement_BUS;
 namespace ParkingManagement_GUI
 {
     public partial class LoginForm : Form
@@ -18,7 +18,8 @@ namespace ParkingManagement_GUI
 
             this.ActiveControl = UserNamePB;
         }
-
+        Staff_Account_BUS Staff = new Staff_Account_BUS();
+        Staff_Only_Form staff_only = new Staff_Only_Form(); 
         // event when user enter the textbox
         private void UserNameTxb_Enter(object sender, EventArgs e)
         {
@@ -46,6 +47,7 @@ namespace ParkingManagement_GUI
         {
             if (PasswordTxb.Text.Equals("Password"))
             {
+                PasswordTxb.UseSystemPasswordChar = true;
                 PasswordTxb.Text = "";
                 PasswordTxb.Font = new Font(FontFamily.GenericSansSerif, 14.25f, FontStyle.Regular);
                 PasswordTxb.ForeColor = Color.Black;
@@ -57,9 +59,12 @@ namespace ParkingManagement_GUI
         {
             if (string.IsNullOrEmpty(PasswordTxb.Text) && string.IsNullOrWhiteSpace(PasswordTxb.Text))
             {
+                PasswordTxb.UseSystemPasswordChar = false;
                 PasswordTxb.Text = "Password";
                 PasswordTxb.Font = new Font("Century Gothic", 14.25f, FontStyle.Italic);
                 PasswordTxb.ForeColor = Color.DarkGray;
+
+                this.ActiveControl = UserNamePB;
             }
         }
 
@@ -84,11 +89,27 @@ namespace ParkingManagement_GUI
         // event whe user click log in button
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            Staff_Only mainForm = new Staff_Only();
 
-            this.Hide();
-            mainForm.ShowDialog();
-            this.Show();
+            if (Staff.LoginAccount(UserNameTxb.Text, PasswordTxb.Text) == 0|| Staff.LoginAccount(UserNameTxb.Text, PasswordTxb.Text) == 1)
+            {
+                this.Hide();
+                staff_only.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Mật khẩu hoặc tên đăng nhập không đúng! Vui lòng nhập lại tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Sau khi kiểm tra hết các tk có trong database nếu không giống cái nào thì reset lại ô nhập
+                UserNameTxb.Text = "";
+                PasswordTxb.Text = "";
+
+                UserNameTxb.Select(); // Focus lại vào ô nhập user name
+
+                return;
+            }
         }
+
+
     }
 }

@@ -53,19 +53,25 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff_Form.cs">
+    <Compile Include="Staff_Only_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff_Form.Designer.cs">
-      <DependentUpon>Staff_Form.cs</DependentUpon>
+    <Compile Include="Staff_Only_Form.Designer.cs">
+      <DependentUpon>Staff_Only_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_StaffManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_StaffManage.Designer.cs">
+      <DependentUpon>UC_StaffManage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff_Form.resx">
-      <DependentUpon>Staff_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Staff_Only_Form.resx">
+      <DependentUpon>Staff_Only_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +83,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_StaffManage.resx">
+      <DependentUpon>UC_StaffManage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +101,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingManagement_BUS\ParkingManagement_BUS.csproj">
+      <Project>{713818ac-9cd6-47c8-90b7-365fbde69346}</Project>
+      <Name>ParkingManagement_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingManagement_DTO\ParkingManagement_DTO.csproj">
+      <Project>{c76e07ce-598e-419a-ba47-cb664e28c2f3}</Project>
+      <Name>ParkingManagement_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

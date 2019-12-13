@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ParkingManagement_DTO;
 namespace ParkingManagement_DAL
 {
-    class Staff_Account_DAL
+   public  class Staff_Account_DAL
     {
         // List để lưu dữ liệu mật khẩu truy xuất từ database (xét xem nhân viên có nhập đúng mk đăng nhập hay không)
         List<Staff_Account_DTO> List_accounts = new List<Staff_Account_DTO>();
@@ -31,6 +31,7 @@ namespace ParkingManagement_DAL
                 {
                     Staff_Account_DTO Staff = new Staff_Account_DTO(); // biến để lưu trữ các thông tin được đọc ra và đưa vào list
 
+                    Staff.ID = (int)Data_reader["ID"];
                     Staff.USERNAME = (string)Data_reader["Username"]; // đọc dữ liệu đã truy xuất
                     Staff.PASS = (string)Data_reader["Pass"];
                     Staff.LOAITAIKHOAN = (int)Data_reader["LoaiTaiKhoan"];
@@ -101,7 +102,7 @@ namespace ParkingManagement_DAL
             }
         }
         //Tạo mới tai khoản đăng nhập ứng dụng
-        public void CreateAccount(string ID, string USERNAME, string PASS, int LOAITAIKHOAN)
+        public void CreateAccount(string USERNAME, string PASS, int LOAITAIKHOAN)
         {
             string Update_set = "INSERT INTO TaiKhoan VALUES (@USERNAME, @PASS, @LoaiTaiKhoan)";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))

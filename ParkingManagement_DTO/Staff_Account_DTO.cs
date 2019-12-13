@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingManagement_DTO
 {
-    public class Staff_account
+    public class Staff_Account_DTO
     {
         private int id;
         public int ID
