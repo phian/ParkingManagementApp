@@ -19,6 +19,9 @@ namespace ParkingManagement_GUI
         VideoCaptureDevice CaptureImg;
         MJPEGStream PhoneCamStream;
 
+        public static int inCameraIndex;
+        public static int outCameraIndex;
+
 
         public MainForm()
         {
@@ -29,7 +32,7 @@ namespace ParkingManagement_GUI
         private void MainForm_Load(object sender, EventArgs e)
         {
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
-            PhoneCamStream = new MJPEGStream("http://192.168.137.176:8080/video");
+            PhoneCamStream = new MJPEGStream("http://192.168.43.179:8080/video");
 
             foreach (FilterInfo item in CaptureDevice) // Add available web cam for combobox
             {
@@ -40,6 +43,8 @@ namespace ParkingManagement_GUI
             CaptureCB.SelectedIndex = 0;
             CaptureImg = new VideoCaptureDevice();
         }
+
+        private 
 
         // event when user click button to start camera
         private void StartCameraButton_Click(object sender, EventArgs e)
@@ -66,7 +71,7 @@ namespace ParkingManagement_GUI
                 }
 
                 // create view for out vehicle camera
-                PhoneCamStream = new MJPEGStream("http://192.168.137.176:8080/video");
+                PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
                 PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
                 PhoneCamStream.Start();
             }

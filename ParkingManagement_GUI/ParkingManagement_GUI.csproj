@@ -100,15 +100,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ParkingManagement_BUS\ParkingManagement_BUS.csproj">
-      <Project>{27c03c37-592e-468f-8853-c53b45b7ea34}</Project>
-      <Name>ParkingManagement_BUS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ParkingManagement_DTO\ParkingManagement_DTO.csproj">
-      <Project>{2b12e662-02cf-4bcd-a7a3-66e5273f1544}</Project>
-      <Name>ParkingManagement_DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

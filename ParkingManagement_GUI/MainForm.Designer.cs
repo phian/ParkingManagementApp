@@ -94,7 +94,7 @@
             // 
             // OutVehiclePB
             // 
-            this.OutVehiclePB.Location = new System.Drawing.Point(329, 364);
+            this.OutVehiclePB.Location = new System.Drawing.Point(329, 365);
             this.OutVehiclePB.Name = "OutVehiclePB";
             this.OutVehiclePB.Size = new System.Drawing.Size(274, 264);
             this.OutVehiclePB.TabIndex = 3;
