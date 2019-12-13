@@ -51,6 +51,8 @@ namespace ParkingManagement_GUI
                 CaptureImg = new VideoCaptureDevice(CaptureDevice[CamIndex].MonikerString);
                 CaptureImg.Start();
                 CaptureImg.NewFrame += CaptureImg_NewFrame;
+
+                return;
             }
             if (PhoneCamStream.IsRunning)
             {
@@ -64,6 +66,8 @@ namespace ParkingManagement_GUI
                 PhoneCamStream = new MJPEGStream(CamIPAddress);
                 PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
                 PhoneCamStream.Start();
+
+                return;
             }
             
             else if (CamIndex == 2 && IsStartCamButClicked)
@@ -89,6 +93,8 @@ namespace ParkingManagement_GUI
                 CaptureImg = new VideoCaptureDevice(CaptureDevice[CamIndex].MonikerString);
                 CaptureImg.Start();
                 CaptureImg.NewFrame += CaptureImg_NewFrame;
+
+                return;
             }
             if (PhoneCamStream.IsRunning)
             {
@@ -102,6 +108,8 @@ namespace ParkingManagement_GUI
                 PhoneCamStream = new MJPEGStream(CamIPAddress);
                 PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
                 PhoneCamStream.Start();
+
+                return;
             }
             else if (CamIndex == 2 && IsStartCamButClicked)
             {
