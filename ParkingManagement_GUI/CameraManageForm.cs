@@ -14,12 +14,11 @@ namespace ParkingManagement_GUI
     public partial class CameraManageForm : Form
     {
         FilterInfoCollection CaptureDevice;
-        VideoCaptureDevice CaptureImg;
 
-        bool isInCamClicked = false, isOutCamClicked =  false;
-
-        public delegate void OpenCameraMessage(int InCamIndex, int OutCamIndex, bool IsStartInCamButClicked, bool IsStartOutCamButClicked);
-        public event OpenCameraMessage StartCamera; 
+        public delegate void OpenCameraMessage(int CamIndex, int CamPosition, bool IsStartCamButClicked);
+        public event OpenCameraMessage StartInCamera;
+        public event OpenCameraMessage StartOutCamera;
+        public event OpenCameraMessage StartScanCamera;
 
         public CameraManageForm()
         {
@@ -34,33 +33,51 @@ namespace ParkingManagement_GUI
             {
                 SelectInCamCB.Items.Add(item.Name);
                 SelectOutCamCB.Items.Add(item.Name);
+                SelectScanCamCB.Items.Add(item.Name);
             }
 
             SelectInCamCB.Items.Add("PHONE CAMERA");
+            SelectInCamCB.Items.Add("PHONE CAMERA1");
+
             SelectOutCamCB.Items.Add("PHONE CAMERA");
+            SelectOutCamCB.Items.Add("PHONE CAMERA1");
+
+            SelectScanCamCB.Items.Add("PHONE CAMERA");
+            SelectScanCamCB.Items.Add("PHONE CAMERA1");
 
             SelectInCamCB.SelectedIndex = 0;
-
-            CaptureImg = new VideoCaptureDevice();
+            SelectOutCamCB.SelectedIndex = 0;
+            SelectScanCamCB.SelectedIndex = 0;
         }
 
         // event when user click button to start in camera
         private void StartInCamButton_Click(object sender, EventArgs e)
         {
-            isInCamClicked = true;
+            int inx = SelectInCamCB.SelectedIndex;
 
-            if (SelectInCamCB.SelectedIndex == 0)
+            if (StartInCamera != null)
             {
-                if (StartCamera != null && isOutCamClicked == false)
+                if ((SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled 
+                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled)
+                    || (SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled
+                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false)
+                    || (SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) == false
+                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled))
                 {
-                    StartCamera(0, 1, true, false);
+                    StartInCamera(inx, 1, true);
+
+                    SelectInCamCB.Enabled = false;
+                    StartInCamButton.Enabled = false;
                 }
-            }
-            else if (StartCamera != null && isOutCamClicked == true)
-            {
-                if (StartCamera != null)
+                else if ((SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled == false)
+                          || (SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled == false))
                 {
-                    StartCamera(1, 0, true, true);
+                    MessageBox.Show("Input camera has conflicted with another camera! Please check again");
+
+                    SelectInCamCB.Enabled = true;
+                    StartInCamButton.Enabled = true;
+
+                    return;
                 }
             }
         }
@@ -68,47 +85,82 @@ namespace ParkingManagement_GUI
         // event when user click to start out camera
         private void StartOutCamButton_Click(object sender, EventArgs e)
         {
-            isOutCamClicked = true;
+            int inx = SelectOutCamCB.SelectedIndex;
 
-            if (SelectOutCamCB.SelectedIndex == 0)
+            if (StartInCamera != null)
             {
-                if (StartCamera != null && isInCamClicked)
+                if ((SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled
+                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled)
+                    || (SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled
+                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false)
+                    || (SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) == false
+                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && SelectScanCamCB.Enabled))
                 {
-                    StartCamera(1, 0, true, true);
+                    StartOutCamera(inx, 2, true);
+
+                    SelectOutCamCB.Enabled = false;
+                    StartOutCamButton.Enabled = false;
                 }
-            }
-            else
-            {
-                if (StartCamera != null && isInCamClicked == false)
+                else if ((SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled == false)
+                || (SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled == false))
                 {
-                    StartCamera(0, 1, false, true);
+                    MessageBox.Show("Output camera has conflicted with another camera! Please check again");
+
+                    SelectOutCamCB.Enabled = true;
+
+                    return;
                 }
             }
         }
 
-        // event if user change the index of in camera
+        // event when user click to start scan camera
+        private void StartScanCamBut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // event when user change the camera index in in cam combobox
         private void SelectInCamCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (SelectInCamCB.SelectedIndex == 0)
+            if (SelectInCamCB.SelectedIndex >= 1)
             {
-                SelectOutCamCB.SelectedIndex = 1;
+                InCamIPAddLB.Visible = true;
+                InCamIPAddTxb.Visible = true;
             }
             else
             {
-                SelectOutCamCB.SelectedIndex = 0;
+                InCamIPAddLB.Visible = false;
+                InCamIPAddTxb.Visible = false;
             }
         }
 
-        // event if user change the index of out camera
+        // event when user change the camera index in out cam combobox
         private void SelectOutCamCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (SelectOutCamCB.SelectedIndex == 0)
+            if (SelectOutCamCB.SelectedIndex >= 1)
             {
-                SelectInCamCB.SelectedIndex = 1;
+                OutCamIPAddLB.Visible = true;
+                OutCamIPAddTxb.Visible = true;
             }
             else
             {
-                SelectInCamCB.SelectedIndex = 0;
+                OutCamIPAddLB.Visible = false;
+                OutCamIPAddTxb.Visible = false;
+            }
+        }
+
+        // event when user change the camera index in scan cam combobox
+        private void SelectScanCamCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectScanCamCB.SelectedIndex >= 1)
+            {
+                ScanCamIPAddLB.Visible = true;
+                ScanCamIPAddTxb.Visible = true;
+            }
+            else
+            {
+                ScanCamIPAddLB.Visible = false;
+                ScanCamIPAddTxb.Visible = false;
             }
         }
     }

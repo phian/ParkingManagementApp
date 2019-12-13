@@ -47,14 +47,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ParkAmountLB = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.StartCameraButton = new System.Windows.Forms.Button();
-            this.CaptureButton = new System.Windows.Forms.Button();
-            this.ClearImgButton = new System.Windows.Forms.Button();
             this.InputCameraLB = new System.Windows.Forms.Label();
             this.InVehicleLB = new System.Windows.Forms.Label();
             this.OutputCameraLB = new System.Windows.Forms.Label();
             this.OutVehicleLB = new System.Windows.Forms.Label();
-            this.CaptureCB = new System.Windows.Forms.ComboBox();
+            this.ActionModeCB = new System.Windows.Forms.ComboBox();
+            this.ClearImgButton = new System.Windows.Forms.Button();
+            this.CaptureButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).BeginInit();
@@ -141,7 +140,7 @@
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Location = new System.Drawing.Point(628, 53);
+            this.panel1.Location = new System.Drawing.Point(628, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 264);
             this.panel1.TabIndex = 8;
@@ -175,7 +174,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(728, 346);
+            this.dateTimePicker1.Location = new System.Drawing.Point(728, 369);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(313, 32);
             this.dateTimePicker1.TabIndex = 9;
@@ -184,7 +183,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(786, 398);
+            this.label1.Location = new System.Drawing.Point(786, 421);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 55);
             this.label1.TabIndex = 10;
@@ -194,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(902, 481);
+            this.label2.Location = new System.Drawing.Point(902, 504);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 31);
             this.label2.TabIndex = 11;
@@ -204,7 +203,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(722, 480);
+            this.label3.Location = new System.Drawing.Point(722, 503);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 31);
             this.label3.TabIndex = 12;
@@ -214,7 +213,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(724, 538);
+            this.label4.Location = new System.Drawing.Point(724, 561);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 31);
             this.label4.TabIndex = 13;
@@ -224,7 +223,7 @@
             // 
             this.ParkAmountLB.AutoSize = true;
             this.ParkAmountLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParkAmountLB.Location = new System.Drawing.Point(859, 538);
+            this.ParkAmountLB.Location = new System.Drawing.Point(859, 561);
             this.ParkAmountLB.Name = "ParkAmountLB";
             this.ParkAmountLB.Size = new System.Drawing.Size(139, 31);
             this.ParkAmountLB.TabIndex = 14;
@@ -234,41 +233,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1004, 538);
+            this.label6.Location = new System.Drawing.Point(1004, 561);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 31);
             this.label6.TabIndex = 15;
             this.label6.Text = "đồng";
-            // 
-            // StartCameraButton
-            // 
-            this.StartCameraButton.Location = new System.Drawing.Point(619, 355);
-            this.StartCameraButton.Name = "StartCameraButton";
-            this.StartCameraButton.Size = new System.Drawing.Size(94, 50);
-            this.StartCameraButton.TabIndex = 16;
-            this.StartCameraButton.Text = "Start Camera";
-            this.StartCameraButton.UseVisualStyleBackColor = true;
-            this.StartCameraButton.Click += new System.EventHandler(this.StartCameraButton_Click);
-            // 
-            // CaptureButton
-            // 
-            this.CaptureButton.Location = new System.Drawing.Point(619, 412);
-            this.CaptureButton.Name = "CaptureButton";
-            this.CaptureButton.Size = new System.Drawing.Size(94, 50);
-            this.CaptureButton.TabIndex = 17;
-            this.CaptureButton.Text = "Capture";
-            this.CaptureButton.UseVisualStyleBackColor = true;
-            this.CaptureButton.Click += new System.EventHandler(this.CaptureButton_Click);
-            // 
-            // ClearImgButton
-            // 
-            this.ClearImgButton.Location = new System.Drawing.Point(619, 470);
-            this.ClearImgButton.Name = "ClearImgButton";
-            this.ClearImgButton.Size = new System.Drawing.Size(94, 50);
-            this.ClearImgButton.TabIndex = 18;
-            this.ClearImgButton.Text = "Clear Image";
-            this.ClearImgButton.UseVisualStyleBackColor = true;
-            this.ClearImgButton.Click += new System.EventHandler(this.ClearImgButton_Click);
             // 
             // InputCameraLB
             // 
@@ -310,27 +279,45 @@
             this.OutVehicleLB.TabIndex = 22;
             this.OutVehicleLB.Text = "Ảnh xe ra";
             // 
-            // CaptureCB
+            // ActionModeCB
             // 
-            this.CaptureCB.FormattingEnabled = true;
-            this.CaptureCB.Location = new System.Drawing.Point(619, 538);
-            this.CaptureCB.Name = "CaptureCB";
-            this.CaptureCB.Size = new System.Drawing.Size(94, 21);
-            this.CaptureCB.TabIndex = 23;
+            this.ActionModeCB.FormattingEnabled = true;
+            this.ActionModeCB.Location = new System.Drawing.Point(831, 28);
+            this.ActionModeCB.Name = "ActionModeCB";
+            this.ActionModeCB.Size = new System.Drawing.Size(94, 21);
+            this.ActionModeCB.TabIndex = 26;
+            this.ActionModeCB.SelectedIndexChanged += new System.EventHandler(this.ActionModeCB_SelectedIndexChanged);
+            // 
+            // ClearImgButton
+            // 
+            this.ClearImgButton.Location = new System.Drawing.Point(730, 12);
+            this.ClearImgButton.Name = "ClearImgButton";
+            this.ClearImgButton.Size = new System.Drawing.Size(94, 50);
+            this.ClearImgButton.TabIndex = 25;
+            this.ClearImgButton.Text = "Clear Image";
+            this.ClearImgButton.UseVisualStyleBackColor = true;
+            // 
+            // CaptureButton
+            // 
+            this.CaptureButton.Location = new System.Drawing.Point(628, 12);
+            this.CaptureButton.Name = "CaptureButton";
+            this.CaptureButton.Size = new System.Drawing.Size(94, 50);
+            this.CaptureButton.TabIndex = 24;
+            this.CaptureButton.Text = "Capture";
+            this.CaptureButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 641);
-            this.Controls.Add(this.CaptureCB);
+            this.Controls.Add(this.ActionModeCB);
+            this.Controls.Add(this.ClearImgButton);
+            this.Controls.Add(this.CaptureButton);
             this.Controls.Add(this.OutVehicleLB);
             this.Controls.Add(this.OutputCameraLB);
             this.Controls.Add(this.InVehicleLB);
             this.Controls.Add(this.InputCameraLB);
-            this.Controls.Add(this.ClearImgButton);
-            this.Controls.Add(this.CaptureButton);
-            this.Controls.Add(this.StartCameraButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ParkAmountLB);
             this.Controls.Add(this.label4);
@@ -386,13 +373,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label ParkAmountLB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button StartCameraButton;
-        private System.Windows.Forms.Button CaptureButton;
-        private System.Windows.Forms.Button ClearImgButton;
         private System.Windows.Forms.Label InputCameraLB;
         private System.Windows.Forms.Label InVehicleLB;
         private System.Windows.Forms.Label OutputCameraLB;
         private System.Windows.Forms.Label OutVehicleLB;
-        private System.Windows.Forms.ComboBox CaptureCB;
+        private System.Windows.Forms.ComboBox ActionModeCB;
+        private System.Windows.Forms.Button ClearImgButton;
+        private System.Windows.Forms.Button CaptureButton;
     }
 }
