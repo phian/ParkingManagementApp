@@ -47,7 +47,7 @@ namespace ParkingManagement_DAL
         public DataSet Get()
         {
             DataSet data = new DataSet();
-            string Select_all = "SELECT NhanVien.ID, NhanVien.Ten, TaiKhoan.Username, TaiKhoann.LoaiTaiKhoan from TaiKhoan, NhanVien WHERE TaiKhoan.ID=NhanVien.ID_taikhoan";
+            string Select_all = "SELECT NhanVien.ID, NhanVien.Ten,NhanVien.NgaySinh,NhanVien.GIOITINH, TaiKhoan.Username, TaiKhoan.LoaiTaiKhoan from TaiKhoan, NhanVien WHERE TaiKhoan.ID=NhanVien.ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 connection.Open();
@@ -57,31 +57,9 @@ namespace ParkingManagement_DAL
             }
             return data;
         }
-        //Thay đổi mật khẩu trong bảng PASSWORD
-        public void ChangePassword(string ID, string USERNAME, string NEWPASSWORD)
-        {
-            string Update_set = "UPDATE TaiKhoan SET Pass=@NEWPASSWORD WHERE ID=@ID AND Username=@USERNAME";
-            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    SqlCommand cmdInsert = new SqlCommand(Update_set, connection);
-                    cmdInsert.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
-                    cmdInsert.Parameters.Add("@NEWPASSWORD", SqlDbType.VarChar).Value = NEWPASSWORD;
-                    cmdInsert.Parameters.Add("@USERNAME", SqlDbType.VarChar).Value = USERNAME;
-                    cmdInsert.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("Thay đổi mật khẩu thành công!");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+                
         //Xoá tài khoản đăng nhập ứng dụng
-        public void Delete(string ID)
+        public void Delete(int ID)
         {
             string Delete_from = "DELETE FROM TaiKhoan WHERE ID=@ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))

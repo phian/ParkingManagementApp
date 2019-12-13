@@ -21,10 +21,6 @@ namespace ParkingManagement_BUS
         {
             return Account.Get();
         }
-        public void ChangePassword(int ID, string USERNAME, string NEWPASS)
-        {
-            Account.ChangePassword(ID, USERNAME, NEWPASS);
-        }
         public void CreateAccount(string USERNAME, string PASS, int LoaiTaiKhoan)
         {
             Account.CreateAccount(USERNAME, PASS, LoaiTaiKhoan);

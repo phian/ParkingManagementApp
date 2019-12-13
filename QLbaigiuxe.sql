@@ -1,4 +1,4 @@
-CREATE DATABASE PARKINGMANAGE
+﻿CREATE DATABASE PARKINGMANAGE
 USE PARKINGMANAGE
 Create Table TaiKhoan
 (
@@ -7,15 +7,22 @@ Create Table TaiKhoan
 	Pass varchar(24),
 	LoaiTaiKhoan int
 )
+INSERT INTO TaiKhoan VALUES ('ADMIN','1',1)
+SELECT *FROM TaiKhoan
 Go
-
+drop table NhanVien
 Create table NhanVien
 (
-	ID int IDENTITY(1,1) primary key,
-	Ten nvarchar(50),
+	ID int IDENTITY(1,1) foreign key references TaiKhoan(ID),
+	Ten nvarchar(50) not null, 
 	NgaySinh datetime,
-	ID_taikhoan int foreign key references TaiKhoan(ID)
+	GIOITINH nvarchar(20)
 )
+ALTER TABLE NhanVien
+ADD CONSTRAINT nhanvien_pk PRIMARY KEY (ID,Ten);
+SET DATEFORMAT DMY 
+DELETE NHANVIEN WHERE ID=1;
+INSERT INTO NhanVien VALUES (N'TRƯƠNG HOÀNG VINH','12-12-1999','Nam')
 Go
 
 Create table TheXe
@@ -56,3 +63,4 @@ Create table DoanhThu
 	Ngay datetime,
 	MucThu money
 )
+select *from TaiKhoan, NhanVien where TaiKhoan.ID = NhanVien.ID
