@@ -46,6 +46,7 @@
             this.ScanCamIPAddTxb = new System.Windows.Forms.TextBox();
             this.OutCamIPAddLB = new System.Windows.Forms.Label();
             this.ScanCamIPAddLB = new System.Windows.Forms.Label();
+            this.HideFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StartOutCamButton
@@ -213,12 +214,23 @@
             this.ScanCamIPAddLB.Text = "Camera IP address:";
             this.ScanCamIPAddLB.Visible = false;
             // 
+            // HideFormButton
+            // 
+            this.HideFormButton.Location = new System.Drawing.Point(443, 258);
+            this.HideFormButton.Name = "HideFormButton";
+            this.HideFormButton.Size = new System.Drawing.Size(111, 50);
+            this.HideFormButton.TabIndex = 43;
+            this.HideFormButton.Text = "Finish set up";
+            this.HideFormButton.UseVisualStyleBackColor = true;
+            this.HideFormButton.Click += new System.EventHandler(this.HideFormButton_Click);
+            // 
             // CameraManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(572, 263);
+            this.ClientSize = new System.Drawing.Size(565, 320);
+            this.Controls.Add(this.HideFormButton);
             this.Controls.Add(this.ScanCamIPAddLB);
             this.Controls.Add(this.OutCamIPAddLB);
             this.Controls.Add(this.ScanCamIPAddTxb);
@@ -237,6 +249,7 @@
             this.Controls.Add(this.SelectInCamCB);
             this.Controls.Add(this.StartInCamButton);
             this.Controls.Add(this.StartOutCamButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CameraManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CameraManageForm";
@@ -265,5 +278,6 @@
         private System.Windows.Forms.TextBox ScanCamIPAddTxb;
         private System.Windows.Forms.Label OutCamIPAddLB;
         private System.Windows.Forms.Label ScanCamIPAddLB;
+        private System.Windows.Forms.Button HideFormButton;
     }
 }

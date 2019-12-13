@@ -35,7 +35,7 @@ namespace ParkingManagement_GUI
         }
 
         // event when user click start in camera button in set up form
-        private void ManageForm_StartInCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked)
+        private void ManageForm_StartInCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked, string CamIPAddress)
         {
             inCamPosition = CamPosition;
 
@@ -48,7 +48,7 @@ namespace ParkingManagement_GUI
             else if (CamIndex == 0 && IsStartCamButClicked && CaptureImg.IsRunning == false)
             {
                 // create view for in vehicle camera
-                CaptureImg = new VideoCaptureDevice(CaptureDevice[ActionModeCB.SelectedIndex].MonikerString);
+                CaptureImg = new VideoCaptureDevice(CaptureDevice[CamIndex].MonikerString);
                 CaptureImg.Start();
                 CaptureImg.NewFrame += CaptureImg_NewFrame;
             }
@@ -61,7 +61,7 @@ namespace ParkingManagement_GUI
             else if (CamIndex == 1 && IsStartCamButClicked && PhoneCamStream.IsRunning == false)
             {
                 // create view for out vehicle camera
-                PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                PhoneCamStream = new MJPEGStream(CamIPAddress);
                 PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
                 PhoneCamStream.Start();
             }
@@ -73,7 +73,7 @@ namespace ParkingManagement_GUI
         }
 
         // event when user click start out camera button in set up form
-        private void ManageForm_StartOutCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked)
+        private void ManageForm_StartOutCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked, string CamIPAddress)
         {
             outCamPosition = CamPosition;
 
@@ -86,7 +86,7 @@ namespace ParkingManagement_GUI
             else if (CamIndex == 0 && IsStartCamButClicked && CaptureImg.IsRunning == false)
             {
                 // create view for in vehicle camera
-                CaptureImg = new VideoCaptureDevice(CaptureDevice[ActionModeCB.SelectedIndex].MonikerString);
+                CaptureImg = new VideoCaptureDevice(CaptureDevice[CamIndex].MonikerString);
                 CaptureImg.Start();
                 CaptureImg.NewFrame += CaptureImg_NewFrame;
             }
@@ -99,7 +99,7 @@ namespace ParkingManagement_GUI
             else if (CamIndex == 1 && IsStartCamButClicked && PhoneCamStream.IsRunning == false)
             {
                 // create view for out vehicle camera
-                PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                PhoneCamStream = new MJPEGStream(CamIPAddress);
                 PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
                 PhoneCamStream.Start();
             }
@@ -110,7 +110,7 @@ namespace ParkingManagement_GUI
         }
 
         // event when user click start scan camera button in set up form
-        private void ManageForm_StartScanCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked)
+        private void ManageForm_StartScanCamera(int CamIndex, int CamPosition, bool IsStartCamButClicked, string CamIPAddress)
         {
         }
 
@@ -120,7 +120,7 @@ namespace ParkingManagement_GUI
             CreateItemForActionModeCB();
 
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
-            PhoneCamStream = new MJPEGStream("http://192.168.43.179:8080/video");
+            PhoneCamStream = new MJPEGStream("");
 
             CaptureImg = new VideoCaptureDevice();
         }
@@ -133,7 +133,7 @@ namespace ParkingManagement_GUI
             {
                 InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
             }
-            if (outCamPosition == 2)
+            else if (outCamPosition == 2)
             {
                 OutputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
             }
@@ -147,7 +147,7 @@ namespace ParkingManagement_GUI
             {
                 InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
             }
-            if (outCamPosition == 2)
+            else if (outCamPosition == 2)
             {
                 OutputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
             }

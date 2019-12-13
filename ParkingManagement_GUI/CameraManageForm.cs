@@ -15,7 +15,7 @@ namespace ParkingManagement_GUI
     {
         FilterInfoCollection CaptureDevice;
 
-        public delegate void OpenCameraMessage(int CamIndex, int CamPosition, bool IsStartCamButClicked);
+        public delegate void OpenCameraMessage(int CamIndex, int CamPosition, bool IsStartCamButClicked, string CamIPAddress);
         public event OpenCameraMessage StartInCamera;
         public event OpenCameraMessage StartOutCamera;
         public event OpenCameraMessage StartScanCamera;
@@ -57,25 +57,66 @@ namespace ParkingManagement_GUI
 
             if (StartInCamera != null)
             {
+                if (InCamIPAddTxb.Visible == true && (@InCamIPAddTxb.Text).Length == 27)
+                {
+                    string temp = (@InCamIPAddTxb.Text).Substring(7, 15);
+
+                    if (ValidateIPv4(temp) == false)
+                    {
+                        MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                        return;
+                    }
+                }
+                else if ((@InCamIPAddTxb.Text).Length < 27 && OutCamIPAddTxb.Visible)
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
+                else if (InCamIPAddTxb.Visible == true && string.IsNullOrEmpty(InCamIPAddTxb.Text) && string.IsNullOrWhiteSpace(InCamIPAddTxb.Text))
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
+                else if (InCamIPAddTxb.Visible == true && InCamIPAddTxb.Text.Contains("http://") == false 
+                    && InCamIPAddTxb.Text.Contains("https://") == false)
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
                 if ((SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled 
                     && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled)
                     || (SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled
                     && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false)
                     || (SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) == false
-                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled))
+                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled)
+                    || (SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) == false
+                    && SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false))
                 {
-                    StartInCamera(inx, 1, true);
+                    if (InCamIPAddTxb.Visible == true)
+                    {
+                        StartInCamera(inx, 1, true, (@InCamIPAddTxb.Text.ToLower() + @"/video").Trim());
+                    }
+                    else
+                    {
+                        StartInCamera(inx, 1, true, "");
+                    }
 
                     SelectInCamCB.Enabled = false;
                     StartInCamButton.Enabled = false;
+                    InCamIPAddTxb.Enabled = false;
                 }
                 else if ((SelectInCamCB.SelectedIndex.Equals(SelectOutCamCB.SelectedIndex) && StartOutCamButton.Enabled == false)
                           || (SelectInCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled == false))
                 {
-                    MessageBox.Show("Input camera has conflicted with another camera! Please check again");
+                    MessageBox.Show("Input camera has conflicted with another camera! Please check again", "Warning!", MessageBoxButtons.OK);
 
                     SelectInCamCB.Enabled = true;
                     StartInCamButton.Enabled = true;
+                    InCamIPAddTxb.Enabled = true;
 
                     return;
                 }
@@ -89,17 +130,57 @@ namespace ParkingManagement_GUI
 
             if (StartInCamera != null)
             {
+                if (OutCamIPAddTxb.Visible == true && (@OutCamIPAddTxb.Text).Length == 27)
+                {
+                    string temp = (@OutCamIPAddTxb.Text).Substring(7, 15);
+
+                    if (ValidateIPv4(temp) == false)
+                    {
+                        MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                        return;
+                    }
+                }
+                else if ((@OutCamIPAddTxb.Text).Length < 27 && OutCamIPAddTxb.Visible)
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
+                else if (OutCamIPAddTxb.Visible == true && string.IsNullOrEmpty(OutCamIPAddTxb.Text) && string.IsNullOrWhiteSpace(OutCamIPAddTxb.Text))
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
+                else if (OutCamIPAddTxb.Visible == true && OutCamIPAddTxb.Text.Contains("http://") == false && OutCamIPAddTxb.Text.Contains("https://") == false)
+                {
+                    MessageBox.Show("Please enter camera IP address to start camera", "Warning!", MessageBoxButtons.OK);
+
+                    return;
+                }
+
                 if ((SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled
                     && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled)
                     || (SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled
                     && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false)
                     || (SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) == false
-                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && SelectScanCamCB.Enabled))
+                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && SelectScanCamCB.Enabled)
+                    || (SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) == false
+                    && SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) == false))
                 {
-                    StartOutCamera(inx, 2, true);
+                    if (OutCamIPAddTxb.Visible == true)
+                    {
+                        StartOutCamera(inx, 2, true, (@OutCamIPAddTxb.Text.ToLower() + @"/video").Trim());
+                    }
+                    else
+                    {
+                        StartOutCamera(inx, 2, true, "");
+                    }
 
                     SelectOutCamCB.Enabled = false;
                     StartOutCamButton.Enabled = false;
+                    OutCamIPAddTxb.Enabled = false;
                 }
                 else if ((SelectOutCamCB.SelectedIndex.Equals(SelectInCamCB.SelectedIndex) && StartInCamButton.Enabled == false)
                 || (SelectOutCamCB.SelectedIndex.Equals(SelectScanCamCB.SelectedIndex) && StartScanCamBut.Enabled == false))
@@ -107,6 +188,8 @@ namespace ParkingManagement_GUI
                     MessageBox.Show("Output camera has conflicted with another camera! Please check again");
 
                     SelectOutCamCB.Enabled = true;
+                    StartOutCamButton.Enabled = true;
+                    OutCamIPAddTxb.Enabled = true;
 
                     return;
                 }
@@ -116,7 +199,7 @@ namespace ParkingManagement_GUI
         // event when user click to start scan camera
         private void StartScanCamBut_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         // event when user change the camera index in in cam combobox
@@ -162,6 +245,31 @@ namespace ParkingManagement_GUI
                 ScanCamIPAddLB.Visible = false;
                 ScanCamIPAddTxb.Visible = false;
             }
+        }
+
+        // event when user finish the form and want to hide the form
+        private void HideFormButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private bool ValidateIPv4(string IPString)
+        {
+            if (string.IsNullOrWhiteSpace(IPString))
+            {
+                return false;
+            }
+
+            string[] splitValues = IPString.Split('.');
+
+            if (splitValues.Length != 4)
+            {
+                return false;
+            }
+
+            byte tempForParsing;
+
+            return splitValues.All(r => byte.TryParse(r, out tempForParsing));
         }
     }
 }
