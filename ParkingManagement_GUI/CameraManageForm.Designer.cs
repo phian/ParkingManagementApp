@@ -61,6 +61,7 @@
             this.SelectInCamCB.Name = "SelectInCamCB";
             this.SelectInCamCB.Size = new System.Drawing.Size(121, 21);
             this.SelectInCamCB.TabIndex = 27;
+            this.SelectInCamCB.SelectedIndexChanged += new System.EventHandler(this.SelectInCamCB_SelectedIndexChanged);
             // 
             // SelectOutCamCB
             // 
@@ -69,6 +70,7 @@
             this.SelectOutCamCB.Name = "SelectOutCamCB";
             this.SelectOutCamCB.Size = new System.Drawing.Size(121, 21);
             this.SelectOutCamCB.TabIndex = 28;
+            this.SelectOutCamCB.SelectedIndexChanged += new System.EventHandler(this.SelectOutCamCB_SelectedIndexChanged);
             // 
             // CameraManageForm
             // 

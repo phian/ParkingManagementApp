@@ -19,18 +19,22 @@ namespace ParkingManagement_GUI
         FilterInfoCollection CaptureDevice;
         VideoCaptureDevice CaptureImg;
         MJPEGStream PhoneCamStream;
+        CameraManageForm ManageForm = new CameraManageForm();
+
+        bool isInCam1 = false, isOutCam1 = false, isInCam2 = false, isOutCam2 = false;
 
 
         public MainForm()
         {
             InitializeComponent();
+
+            ManageForm.StartCamera += ManageForm_StartCamera;
         }
 
         // event when MainForm was loaded
         private void MainForm_Load(object sender, EventArgs e)
         {
-            CameraManageForm cameraManageForm = new CameraManageForm();
-            cameraManageForm.Show();
+            ManageForm.Show();
 
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
             PhoneCamStream = new MJPEGStream("http://192.168.43.179:8080/video");
@@ -43,6 +47,86 @@ namespace ParkingManagement_GUI
             CaptureCB.Items.Add("Phone Camera");
             CaptureCB.SelectedIndex = 0;
             CaptureImg = new VideoCaptureDevice();
+        }
+
+        private void ManageForm_StartCamera(int InCamIndex, int OutCamIndex, bool IsStartInCamButClicked, bool IsStartOutCamButClicked)
+        {
+            if (IsStartInCamButClicked && IsStartOutCamButClicked == false)
+            {
+                if (InCamIndex == 0)
+                {
+                    // create view for in vehicle camera
+                    CaptureImg = new VideoCaptureDevice(CaptureDevice[CaptureCB.SelectedIndex].MonikerString);
+                    CaptureImg.Start();
+                    CaptureImg.NewFrame += CaptureImg_NewFrame;
+
+                    isInCam1 = true;
+                    isOutCam1 = false;
+                    isInCam2 = false;
+                    isOutCam2 = false;
+                }
+                else
+                {
+                    // create view for out vehicle camera
+                    PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                    PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
+                    PhoneCamStream.Start();
+
+                    isInCam2 = true;
+                    isOutCam2 = false;
+                    isInCam1 = false;
+                    isOutCam1 = false;
+                }
+            }
+            else if (IsStartInCamButClicked && IsStartOutCamButClicked)
+            {
+                if (InCamIndex == 0)
+                {
+                    // create view for in vehicle camera
+                    CaptureImg = new VideoCaptureDevice(CaptureDevice[CaptureCB.SelectedIndex].MonikerString);
+                    CaptureImg.Start();
+                    CaptureImg.NewFrame += CaptureImg_NewFrame;
+
+                    // create view for out vehicle camera
+                    PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                    PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
+                    PhoneCamStream.Start();
+
+                    isInCam1 = true;
+                    isOutCam1 = false;
+                    isOutCam2 = true;
+                    isInCam2 = false;
+                }
+                else
+                {
+                    // create view for out vehicle camera
+                    PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                    PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
+                    PhoneCamStream.Start();
+
+                    // create view for in vehicle camera
+                    CaptureImg = new VideoCaptureDevice(CaptureDevice[CaptureCB.SelectedIndex].MonikerString);
+                    CaptureImg.Start();
+                    CaptureImg.NewFrame += CaptureImg_NewFrame;
+
+                    isInCam2 = true;
+                    isOutCam2 = false;
+                    isOutCam1 = true;
+                    isInCam1 = false;
+                }
+            }
+            else if (IsStartInCamButClicked == false && IsStartOutCamButClicked)
+            {
+                // create view for out vehicle camera
+                PhoneCamStream = new MJPEGStream("http://192.168.43.1:8080/video");
+                PhoneCamStream.NewFrame += PhoneCamStream_NewFrame;
+                PhoneCamStream.Start();
+
+                isOutCam2 = true;
+                isInCam2 = false;
+                isInCam1 = false;
+                isOutCam1 = false;
+            }
         }
 
         // event when user click button to start camera
@@ -79,7 +163,17 @@ namespace ParkingManagement_GUI
         // In vehicle camera
         private void CaptureImg_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
+            if (isInCam1 && isOutCam2)
+            {
+                InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
+
+                Bitmap phoneCam = (Bitmap)eventArgs.Frame.Clone();
+                OutputCameraPB.Image = phoneCam;
+            }
+            else if (isInCam1 && isOutCam2 == false)
+            {
+                InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
+            }
         }
 
         // event when user click button to cap the image from camera
@@ -112,8 +206,10 @@ namespace ParkingManagement_GUI
         // event to update frame for picturebox view out vehicle camera
         private void PhoneCamStream_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap phoneCam = (Bitmap)eventArgs.Frame.Clone();
-            OutputCameraPB.Image = phoneCam;
+            if (isInCam2 && isOutCam1 == false)
+            {
+                InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
+            }
         }
 
         // event when user out the main form

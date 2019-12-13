@@ -16,6 +16,8 @@ namespace ParkingManagement_GUI
         FilterInfoCollection CaptureDevice;
         VideoCaptureDevice CaptureImg;
 
+        bool isInCamClicked = false, isOutCamClicked =  false;
+
         public delegate void OpenCameraMessage(int InCamIndex, int OutCamIndex, bool IsStartInCamButClicked, bool IsStartOutCamButClicked);
         public event OpenCameraMessage StartCamera; 
 
@@ -34,11 +36,10 @@ namespace ParkingManagement_GUI
                 SelectOutCamCB.Items.Add(item.Name);
             }
 
-            SelectInCamCB.Items.Add("Phone Camera");
-            SelectInCamCB.SelectedIndex = 0;
-
+            SelectInCamCB.Items.Add("PHONE CAMERA");
             SelectOutCamCB.Items.Add("PHONE CAMERA");
-            SelectOutCamCB.SelectedIndex = 0;
+
+            SelectInCamCB.SelectedIndex = 0;
 
             CaptureImg = new VideoCaptureDevice();
         }
@@ -46,13 +47,20 @@ namespace ParkingManagement_GUI
         // event when user click button to start in camera
         private void StartInCamButton_Click(object sender, EventArgs e)
         {
-            if (SelectInCamCB.SelectedIndex != SelectOutCamCB.SelectedIndex)
+            isInCamClicked = true;
+
+            if (SelectInCamCB.SelectedIndex == 0)
             {
-                if (SelectInCamCB.SelectedIndex == 0)
+                if (StartCamera != null && isOutCamClicked == false)
                 {
+                    StartCamera(0, 1, true, false);
                 }
-                else
+            }
+            else if (StartCamera != null && isOutCamClicked == true)
+            {
+                if (StartCamera != null)
                 {
+                    StartCamera(1, 0, true, true);
                 }
             }
         }
@@ -60,14 +68,47 @@ namespace ParkingManagement_GUI
         // event when user click to start out camera
         private void StartOutCamButton_Click(object sender, EventArgs e)
         {
-            if (SelectInCamCB.SelectedIndex != SelectOutCamCB.SelectedIndex)
+            isOutCamClicked = true;
+
+            if (SelectOutCamCB.SelectedIndex == 0)
             {
-                if (SelectOutCamCB.SelectedIndex == 0)
+                if (StartCamera != null && isInCamClicked)
                 {
+                    StartCamera(1, 0, true, true);
                 }
-                else
+            }
+            else
+            {
+                if (StartCamera != null && isInCamClicked == false)
                 {
+                    StartCamera(0, 1, false, true);
                 }
+            }
+        }
+
+        // event if user change the index of in camera
+        private void SelectInCamCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectInCamCB.SelectedIndex == 0)
+            {
+                SelectOutCamCB.SelectedIndex = 1;
+            }
+            else
+            {
+                SelectOutCamCB.SelectedIndex = 0;
+            }
+        }
+
+        // event if user change the index of out camera
+        private void SelectOutCamCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectOutCamCB.SelectedIndex == 0)
+            {
+                SelectInCamCB.SelectedIndex = 1;
+            }
+            else
+            {
+                SelectInCamCB.SelectedIndex = 0;
             }
         }
     }
