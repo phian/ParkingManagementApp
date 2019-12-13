@@ -16,6 +16,9 @@ namespace ParkingManagement_GUI
         FilterInfoCollection CaptureDevice;
         VideoCaptureDevice CaptureImg;
 
+        public delegate void OpenCameraMessage(int InCamIndex, int OutCamIndex, bool IsStartInCamButClicked, bool IsStartOutCamButClicked);
+        public event OpenCameraMessage StartCamera; 
+
         public CameraManageForm()
         {
             InitializeComponent();
@@ -23,6 +26,8 @@ namespace ParkingManagement_GUI
 
         private void CameraManageForm_Load(object sender, EventArgs e)
         {
+            CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
+
             foreach (FilterInfo item in CaptureDevice) // Add available web cam for combobox
             {
                 SelectInCamCB.Items.Add(item.Name);
@@ -45,11 +50,9 @@ namespace ParkingManagement_GUI
             {
                 if (SelectInCamCB.SelectedIndex == 0)
                 {
-                    MainForm.inCameraIndex = 0;
                 }
                 else
                 {
-                    MainForm.inCameraIndex = 1;
                 }
             }
         }
@@ -61,11 +64,9 @@ namespace ParkingManagement_GUI
             {
                 if (SelectOutCamCB.SelectedIndex == 0)
                 {
-                    MainForm.outCameraIndex = 0;
                 }
                 else
                 {
-                    MainForm.outCameraIndex = 1;
                 }
             }
         }

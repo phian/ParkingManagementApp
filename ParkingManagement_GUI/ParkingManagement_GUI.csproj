@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraManageForm.Designer.cs">
+      <DependentUpon>CameraManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CameraManageForm.resx">
+      <DependentUpon>CameraManageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +108,16 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingManagement_BUS\ParkingManagement_BUS.csproj">
+      <Project>{c620a178-64d4-4d65-9b40-6fdfe5ce5ffa}</Project>
+      <Name>ParkingManagement_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingManagement_DTO\ParkingManagement_DTO.csproj">
+      <Project>{34e32ce3-99f7-44c3-aed8-c8c105a92ae2}</Project>
+      <Name>ParkingManagement_DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

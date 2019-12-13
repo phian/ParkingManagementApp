@@ -1,0 +1,6 @@
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\ParkingManagement_BUS.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\bin\Debug\ParkingManagement_BUS.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\ParkingManagement_BUS.csprojAssemblyReference.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\ParkingManagement_BUS.csproj.CoreCompileInputs.cache
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\ParkingManagement_BUS.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_BUS\obj\Debug\ParkingManagement_BUS.pdb

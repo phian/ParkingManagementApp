@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,6 @@ namespace ParkingManagement_GUI
         VideoCaptureDevice CaptureImg;
         MJPEGStream PhoneCamStream;
 
-        public static int inCameraIndex;
-        public static int outCameraIndex;
-
 
         public MainForm()
         {
@@ -31,6 +29,9 @@ namespace ParkingManagement_GUI
         // event when MainForm was loaded
         private void MainForm_Load(object sender, EventArgs e)
         {
+            CameraManageForm cameraManageForm = new CameraManageForm();
+            cameraManageForm.Show();
+
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
             PhoneCamStream = new MJPEGStream("http://192.168.43.179:8080/video");
 
@@ -43,8 +44,6 @@ namespace ParkingManagement_GUI
             CaptureCB.SelectedIndex = 0;
             CaptureImg = new VideoCaptureDevice();
         }
-
-        private 
 
         // event when user click button to start camera
         private void StartCameraButton_Click(object sender, EventArgs e)
