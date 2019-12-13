@@ -63,7 +63,7 @@
             this.Note_PB.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Note_PB.Location = new System.Drawing.Point(3, 301);
             this.Note_PB.Name = "Note_PB";
-            this.Note_PB.Size = new System.Drawing.Size(49, 50);
+            this.Note_PB.Size = new System.Drawing.Size(49, 53);
             this.Note_PB.TabIndex = 4;
             this.Note_PB.TabStop = false;
             // 
@@ -72,24 +72,24 @@
             this.Staff_Account_PB.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Staff_Account_PB.Location = new System.Drawing.Point(3, 163);
             this.Staff_Account_PB.Name = "Staff_Account_PB";
-            this.Staff_Account_PB.Size = new System.Drawing.Size(49, 50);
+            this.Staff_Account_PB.Size = new System.Drawing.Size(49, 53);
             this.Staff_Account_PB.TabIndex = 0;
             this.Staff_Account_PB.TabStop = false;
             // 
             // Note_Btn
             // 
-            this.Note_Btn.Location = new System.Drawing.Point(58, 301);
+            this.Note_Btn.Location = new System.Drawing.Point(51, 301);
             this.Note_Btn.Name = "Note_Btn";
-            this.Note_Btn.Size = new System.Drawing.Size(106, 53);
+            this.Note_Btn.Size = new System.Drawing.Size(113, 53);
             this.Note_Btn.TabIndex = 3;
             this.Note_Btn.Text = "Nhật ký giao ca";
             this.Note_Btn.UseVisualStyleBackColor = true;
             // 
             // Staff_Acc_Btn
             // 
-            this.Staff_Acc_Btn.Location = new System.Drawing.Point(58, 163);
+            this.Staff_Acc_Btn.Location = new System.Drawing.Point(51, 163);
             this.Staff_Acc_Btn.Name = "Staff_Acc_Btn";
-            this.Staff_Acc_Btn.Size = new System.Drawing.Size(106, 53);
+            this.Staff_Acc_Btn.Size = new System.Drawing.Size(113, 53);
             this.Staff_Acc_Btn.TabIndex = 2;
             this.Staff_Acc_Btn.Text = "Nhân viên";
             this.Staff_Acc_Btn.UseVisualStyleBackColor = true;
@@ -97,9 +97,9 @@
             // Staff_PictureBox
             // 
             this.Staff_PictureBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Staff_PictureBox.Location = new System.Drawing.Point(12, 12);
+            this.Staff_PictureBox.Location = new System.Drawing.Point(0, 0);
             this.Staff_PictureBox.Name = "Staff_PictureBox";
-            this.Staff_PictureBox.Size = new System.Drawing.Size(152, 109);
+            this.Staff_PictureBox.Size = new System.Drawing.Size(170, 121);
             this.Staff_PictureBox.TabIndex = 0;
             this.Staff_PictureBox.TabStop = false;
             // 

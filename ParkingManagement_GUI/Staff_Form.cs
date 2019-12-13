@@ -17,6 +17,5 @@ namespace ParkingManagement_GUI
             InitializeComponent();
         }
 
-      
     }
 }
