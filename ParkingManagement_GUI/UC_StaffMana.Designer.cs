@@ -33,8 +33,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Sex_CBB = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.seenORunseen1_Btn = new System.Windows.Forms.Button();
+            this.seenOrunseen_Btn = new System.Windows.Forms.Button();
             this.AccountType_Cbb = new System.Windows.Forms.ComboBox();
             this.Birth_DT = new System.Windows.Forms.DateTimePicker();
             this.FullName_Txtb = new System.Windows.Forms.TextBox();
@@ -97,8 +97,8 @@
             this.ToolBox_Panel.Controls.Add(this.label8);
             this.ToolBox_Panel.Controls.Add(this.Sex_CBB);
             this.ToolBox_Panel.Controls.Add(this.label7);
-            this.ToolBox_Panel.Controls.Add(this.button2);
-            this.ToolBox_Panel.Controls.Add(this.button1);
+            this.ToolBox_Panel.Controls.Add(this.seenORunseen1_Btn);
+            this.ToolBox_Panel.Controls.Add(this.seenOrunseen_Btn);
             this.ToolBox_Panel.Controls.Add(this.AccountType_Cbb);
             this.ToolBox_Panel.Controls.Add(this.Birth_DT);
             this.ToolBox_Panel.Controls.Add(this.FullName_Txtb);
@@ -149,23 +149,25 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Giới tính(*)";
             // 
-            // button2
+            // seenORunseen1_Btn
             // 
-            this.button2.Location = new System.Drawing.Point(288, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 20);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.seenORunseen1_Btn.Location = new System.Drawing.Point(288, 150);
+            this.seenORunseen1_Btn.Name = "seenORunseen1_Btn";
+            this.seenORunseen1_Btn.Size = new System.Drawing.Size(19, 20);
+            this.seenORunseen1_Btn.TabIndex = 13;
+            this.seenORunseen1_Btn.Text = "button2";
+            this.seenORunseen1_Btn.UseVisualStyleBackColor = true;
+            this.seenORunseen1_Btn.Click += new System.EventHandler(this.seenORunseen1_Btn_Click);
             // 
-            // button1
+            // seenOrunseen_Btn
             // 
-            this.button1.Location = new System.Drawing.Point(288, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 22);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.seenOrunseen_Btn.Location = new System.Drawing.Point(288, 86);
+            this.seenOrunseen_Btn.Name = "seenOrunseen_Btn";
+            this.seenOrunseen_Btn.Size = new System.Drawing.Size(19, 22);
+            this.seenOrunseen_Btn.TabIndex = 12;
+            this.seenOrunseen_Btn.Text = "button1";
+            this.seenOrunseen_Btn.UseVisualStyleBackColor = true;
+            this.seenOrunseen_Btn.Click += new System.EventHandler(this.seenOrunseen_Btn_Click);
             // 
             // AccountType_Cbb
             // 
@@ -192,6 +194,7 @@
             this.FullName_Txtb.Name = "FullName_Txtb";
             this.FullName_Txtb.Size = new System.Drawing.Size(186, 20);
             this.FullName_Txtb.TabIndex = 9;
+            this.FullName_Txtb.Leave += new System.EventHandler(this.FullName_Txtb_Leave);
             // 
             // ConfirmPass_Txtb
             // 
@@ -199,6 +202,7 @@
             this.ConfirmPass_Txtb.Name = "ConfirmPass_Txtb";
             this.ConfirmPass_Txtb.Size = new System.Drawing.Size(143, 20);
             this.ConfirmPass_Txtb.TabIndex = 8;
+            this.ConfirmPass_Txtb.UseSystemPasswordChar = true;
             // 
             // PassWord_Txtb
             // 
@@ -206,6 +210,7 @@
             this.PassWord_Txtb.Name = "PassWord_Txtb";
             this.PassWord_Txtb.Size = new System.Drawing.Size(143, 20);
             this.PassWord_Txtb.TabIndex = 7;
+            this.PassWord_Txtb.UseSystemPasswordChar = true;
             // 
             // UserName_Txtb
             // 
@@ -295,6 +300,7 @@
             this.Save_Btn.TabIndex = 3;
             this.Save_Btn.Text = "Lưu ";
             this.Save_Btn.UseVisualStyleBackColor = true;
+            this.Save_Btn.Click += new System.EventHandler(this.Save_Btn_Click);
             // 
             // Cancel_Btn
             // 
@@ -422,8 +428,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button seenORunseen1_Btn;
+        private System.Windows.Forms.Button seenOrunseen_Btn;
         private System.Windows.Forms.ComboBox AccountType_Cbb;
         private System.Windows.Forms.DateTimePicker Birth_DT;
         private System.Windows.Forms.TextBox FullName_Txtb;

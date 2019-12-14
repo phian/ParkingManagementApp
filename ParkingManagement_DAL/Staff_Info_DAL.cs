@@ -52,9 +52,9 @@ namespace ParkingManagement_DAL
             }
         }
         //Hàm thêm thông tin 1 nhân viên mới vào cơ sở dữ liệu
-        public void Add_New_Staff_Info(string FULLNAME, string DOB,int ID_TaiKhoan)
+        public void Add_New_Staff_Info(string FULLNAME, DateTime DOB, string GIOITINH)
         {
-            string Insert_into = "INSERT INTO NhanVien VALUES (@FULLNAME, @DOB)";
+            string Insert_into = "INSERT INTO NhanVien VALUES (@FULLNAME, @DOB, @Sex)";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try
@@ -65,22 +65,22 @@ namespace ParkingManagement_DAL
                     SqlCommand cmdInsert = new SqlCommand(Insert_into, connection);
                   
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
-                    cmdInsert.Parameters.Add("@DOB", SqlDbType.Date).Value = DOB;
-                   
+                    cmdInsert.Parameters.Add("@DOB", SqlDbType.DateTime).Value = DOB;
+                    cmdInsert.Parameters.Add("@Sex", SqlDbType.NVarChar).Value = GIOITINH;
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Thêm dữ liệu thành công!");
+                   
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    MessageBox.Show("Không thể thêm thông tin nhân viên, xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.ToString());
                 }
             }
         }
         //Hàm thay đổi thông tin 1 nhân viên trong cơ sở dữ liệu
-        public void Update_Staff_Info(int id, string FULLNAME, string DOB)
+        public void Update_Staff_Info(int id, string FULLNAME, DateTime DOB, String Gioitinh)
         {
-            string Update_set = "UPDATE NhanVien SET Ten=@FULLNAME, NgaySinh=@DOB WHERE ID=@ID";
+            string Update_set = "UPDATE NhanVien SET Ten=@FULLNAME, NgaySinh=@DOB, GIOITINH=@Gioitinh WHERE ID=@ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try
@@ -89,16 +89,17 @@ namespace ParkingManagement_DAL
                     SqlCommand cmdSetDateFormat = new SqlCommand("SET DATEFORMAT DMY", connection);
                     cmdSetDateFormat.ExecuteNonQuery();
                     SqlCommand cmdInsert = new SqlCommand(Update_set, connection);
-      
+                    cmdInsert.Parameters.Add("@ID", SqlDbType.Int).Value = id;
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
-                    cmdInsert.Parameters.Add("@DOB", SqlDbType.SmallDateTime).Value = DOB;
+                    cmdInsert.Parameters.Add("@DOB", SqlDbType.DateTime).Value = DOB;
+                    cmdInsert.Parameters.Add("@Gioitinh", SqlDbType.NVarChar).Value = Gioitinh;
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Sửa thông tin nhân viên thành công!");
+                
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    MessageBox.Show("Không thể thay đổi thông tin nhân viên, xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.ToString());
                 }
             }
         }
@@ -111,14 +112,14 @@ namespace ParkingManagement_DAL
                 {
                     connection.Open();
                     SqlCommand cmdInsert = new SqlCommand(Delete_from, connection);
-                    cmdInsert.Parameters.Add("@ID", SqlDbType.VarChar).Value = ID;
+                    cmdInsert.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Xoá thông tin nhân viên thành công!");
+           
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Không thể xoá nhân viên này, xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
                 }
         }
 

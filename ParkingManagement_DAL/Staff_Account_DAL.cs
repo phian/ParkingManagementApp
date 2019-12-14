@@ -71,11 +71,11 @@ namespace ParkingManagement_DAL
                     cmdInsert.Parameters.Add("@ID", SqlDbType.VarChar).Value = ID;
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Đã xoá tài khoản thành công!");
+                 
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
             }
         }
@@ -95,11 +95,11 @@ namespace ParkingManagement_DAL
                     cmdInsert.Parameters.Add("@LoaiTaiKhoan", SqlDbType.Int).Value = LOAITAIKHOAN;
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Tạo tài khoản thành công!");
+                   
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Xin vui lòng thử lại!", "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
             }
         }
@@ -137,6 +137,28 @@ namespace ParkingManagement_DAL
                 return false;
             }
             return false;
+        }
+        public void Update_Staff_Account(int ID, string USERNAME, string NEWPASSWORD, int LoaiTaiKhoan)
+        {
+            string Update_set = "UPDATE TaiKhoan SET PASS=@NEWPASSWORD, LoaiTaiKhoan= @loaitaikhoan WHERE ID=@ID AND USERNAME=@USERNAME";
+            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmdInsert = new SqlCommand(Update_set, connection);
+                    cmdInsert.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
+                    cmdInsert.Parameters.Add("@NEWPASSWORD", SqlDbType.NVarChar).Value = NEWPASSWORD;
+                    cmdInsert.Parameters.Add("@USERNAME", SqlDbType.NVarChar).Value = USERNAME;
+                    cmdInsert.Parameters.Add("@loaitaikhoan", SqlDbType.Int).Value = LoaiTaiKhoan;
+                    cmdInsert.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception)
+                {
+                    
+                }
+            }
         }
     }
 }

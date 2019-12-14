@@ -29,5 +29,9 @@ namespace ParkingManagement_BUS
         {
             Account.Delete(ID);
         }
+        public void UpdateAccount(int ID, string USERNAME, string NEWPASSWORD, int LoaiTaiKhoan)
+        {
+            Account.Update_Staff_Account(ID, USERNAME, NEWPASSWORD, LoaiTaiKhoan);
+        }
     }
 }

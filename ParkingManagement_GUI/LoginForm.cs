@@ -103,9 +103,7 @@ namespace ParkingManagement_GUI
                 // Sau khi kiểm tra hết các tk có trong database nếu không giống cái nào thì reset lại ô nhập
                 UserNameTxb.Text = "";
                 PasswordTxb.Text = "";
-
                 UserNameTxb.Select(); // Focus lại vào ô nhập user name
-
                 return;
             }
         }

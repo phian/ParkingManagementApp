@@ -15,17 +15,17 @@ namespace ParkingManagement_BUS
         {
             return temp.Get_Staff_Info();
         }
-        public void Update(int ID, string FULLNAME, string DOB)
+        public void Update(int ID, string FULLNAME, DateTime DOB, string Gioitinh)
         {
-            temp.Update_Staff_Info(ID, FULLNAME, DOB);
+            temp.Update_Staff_Info(ID, FULLNAME, DOB, Gioitinh);
         }
         public void Delete(int ID)
         {
             temp.Delete_Staff_Info(ID);
         }
-        public void Add(string FULLNAME, string DOB,int ID_TaiKhoan )
+        public void Add(string FULLNAME, DateTime DOB,string GIOITINH)
         {
-            temp.Add_New_Staff_Info(FULLNAME, DOB,ID_TaiKhoan);
+            temp.Add_New_Staff_Info(FULLNAME, DOB,GIOITINH);
         }
     }
 }
