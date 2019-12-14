@@ -309,9 +309,9 @@
             // btnConfig
             // 
             this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfig.Location = new System.Drawing.Point(1189, 22);
+            this.btnConfig.Location = new System.Drawing.Point(1053, 12);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnConfig.Size = new System.Drawing.Size(84, 31);
             this.btnConfig.TabIndex = 27;
             this.btnConfig.Text = "Thiết lập";
             this.btnConfig.UseVisualStyleBackColor = true;
@@ -334,9 +334,9 @@
             this.ScanCamLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScanCamLB.Location = new System.Drawing.Point(625, 327);
             this.ScanCamLB.Name = "ScanCamLB";
-            this.ScanCamLB.Size = new System.Drawing.Size(115, 25);
+            this.ScanCamLB.Size = new System.Drawing.Size(175, 25);
             this.ScanCamLB.TabIndex = 22;
-            this.ScanCamLB.Text = "Ảnh thẻ xe";
+            this.ScanCamLB.Text = "Camera scan thẻ";
             // 
             // ScanCamTimer
             // 
@@ -344,11 +344,11 @@
             // 
             // StartScanCodeBut
             // 
-            this.StartScanCodeBut.Location = new System.Drawing.Point(746, 327);
+            this.StartScanCodeBut.Location = new System.Drawing.Point(1143, 12);
             this.StartScanCodeBut.Name = "StartScanCodeBut";
-            this.StartScanCodeBut.Size = new System.Drawing.Size(104, 30);
+            this.StartScanCodeBut.Size = new System.Drawing.Size(121, 31);
             this.StartScanCodeBut.TabIndex = 28;
-            this.StartScanCodeBut.Text = "Scan Code";
+            this.StartScanCodeBut.Text = "Start Scan Code";
             this.StartScanCodeBut.UseVisualStyleBackColor = true;
             this.StartScanCodeBut.Click += new System.EventHandler(this.StartScanCodeBut_Click);
             // 
