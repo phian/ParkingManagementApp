@@ -42,6 +42,12 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>..\..\Item resources\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="BasselTech CamCapture">
+      <HintPath>..\..\..\BasselTech CamCapture\BasselTech CamCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\BasselTech CamCapture\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using AForge;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using MessagingToolkit.QRCode.Codec;
+using MessagingToolkit.QRCode.Codec.Data;
+using BasselTech_CamCapture;
 
 namespace ParkingManagement_GUI
 {
@@ -19,13 +22,61 @@ namespace ParkingManagement_GUI
         FilterInfoCollection CaptureDevice;
         VideoCaptureDevice CamIN,CamOUT,CamScan;
 
+        Camera camera;
+        BackgroundWorker background;
+        Bitmap captureImg;
+
+
         int inCamPosition = -1, outCamPosition = -1, scanCamPosition = -1;
 
         public MainForm()
         {
             InitializeComponent();
-
+            StartScanCamera();
         }
+
+        public void StartScanCamera()
+        {
+            camera = new Camera(ScanCameraPB);
+            background = new BackgroundWorker();
+            background.DoWork += Background_DoWork;
+
+            try
+            {
+                camera.Start();
+                ScanCamTimer.Start();
+            }
+            catch (Exception)
+            {
+                camera.Stop();
+                ScanCamTimer.Stop();
+            }
+        }
+
+        private void Background_DoWork(object sender, DoWorkEventArgs e)
+        {
+            QRCodeDecoder decoder = new QRCodeDecoder();
+
+            try
+            {
+                MessageBox.Show(decoder.decode(new QRCodeBitmapImage(captureImg)));
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void ScanCamTimer_Tick(object sender, EventArgs e)
+        {
+            captureImg = camera.GetBitmap();
+
+            if (captureImg != null && !background.IsBusy)
+            {
+                background.RunWorkerAsync();
+            }
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
@@ -48,10 +99,12 @@ namespace ParkingManagement_GUI
                 CamOUT.Start();
                 CamOUT.NewFrame += CamOUT_NewFrame;
 
+                CamScan = new VideoCaptureDevice(CaptureDevice[scanCam].MonikerString);
+                CamScan.Start();
+                CamScan.NewFrame += CamScan_NewFrame;
+
                 return;
             }
-            
-
         }
 
         // In vehicle camera
@@ -65,7 +118,13 @@ namespace ParkingManagement_GUI
         {
             OutputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
         }
-        
+
+        private void CamScan_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            //ScanCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
+
+           
+        }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
@@ -83,8 +142,8 @@ namespace ParkingManagement_GUI
             CamIN.WaitForStop();
             CamOUT.SignalToStop();
             CamOUT.WaitForStop();
-            //CamScan.SignalToStop();
-            //CamScan.WaitForStop();
+            CamScan.SignalToStop();
+            CamScan.WaitForStop();
 
             inCamPosition = -1;
             outCamPosition = -1;
@@ -92,20 +151,23 @@ namespace ParkingManagement_GUI
 
             InputCameraPB.Image = null;
             OutputCameraPB.Image = null;
+            ScanCameraPB.Image = null;
         }
 
 
         // event when user out the main form
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CamIN.SignalToStop();
-            CamIN.WaitForStop();
-            CamOUT.SignalToStop();
-            CamOUT.WaitForStop();
-            //CamScan.SignalToStop();
-            //CamScan.WaitForStop();
-
-            
+            if (CamIN != null)
+            {
+                CamIN.SignalToStop();
+                CamIN.WaitForStop();
+                CamOUT.SignalToStop();
+                CamOUT.WaitForStop();
+                CamScan.SignalToStop();
+                CamScan.WaitForStop();
+            }
         }
+
     }
 }
