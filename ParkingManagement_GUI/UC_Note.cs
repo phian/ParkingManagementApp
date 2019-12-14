@@ -19,7 +19,7 @@ namespace ParkingManagement_GUI
         {
             InitializeComponent();
             open_NotePad();
-            reOpen_Notepad_Btn.Visible = false;
+           
         }
         private const int WM_SYSCOMMAND = 274; private const int SC_MAXIMIZE = 61488;
 
