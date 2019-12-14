@@ -7,8 +7,10 @@ Create Table TaiKhoan
 	Pass varchar(24),
 	LoaiTaiKhoan int
 )
+INSERT INTO TaiKhoan VALUES ('ADMIN','1',1)
+SELECT * from TaiKhoan
 Go
-
+SELECT * FROM NhanVien, TaiKhoan where TaiKhoan.ID = Nhanvien.ID_taikhoan
 Create table NhanVien
 (
 	ID int IDENTITY(1,1) primary key,
