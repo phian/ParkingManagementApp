@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.AccountInfo_Dtgrv = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ToolBox_Panel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.Sex_CBB = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,14 +47,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.AddSaveDe_Panel = new System.Windows.Forms.Panel();
+            this.Save_Btn = new System.Windows.Forms.Button();
+            this.Cancel_Btn = new System.Windows.Forms.Button();
+            this.Delete_Btn = new System.Windows.Forms.Button();
+            this.Edit_Btn = new System.Windows.Forms.Button();
+            this.Add_Btn = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccounType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfirmPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AccountInfo_Dtgrv)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.ToolBox_Panel.SuspendLayout();
+            this.AddSaveDe_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AccountInfo_Dtgrv
@@ -69,42 +79,57 @@
             this.AccountInfo_Dtgrv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Username,
-            this.Name,
+            this.FullName,
             this.Birth,
             this.Sex,
-            this.AccounType});
-            this.AccountInfo_Dtgrv.Location = new System.Drawing.Point(0, 210);
+            this.AccountType,
+            this.Password,
+            this.ConfirmPass});
+            this.AccountInfo_Dtgrv.Location = new System.Drawing.Point(0, 245);
             this.AccountInfo_Dtgrv.Name = "AccountInfo_Dtgrv";
             this.AccountInfo_Dtgrv.ReadOnly = true;
             this.AccountInfo_Dtgrv.Size = new System.Drawing.Size(659, 196);
             this.AccountInfo_Dtgrv.TabIndex = 0;
-            this.AccountInfo_Dtgrv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountInfo_Dtgrv_CellClick);
+            this.AccountInfo_Dtgrv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountInfo_Dtgrv_RowEnter);
             // 
-            // panel1
+            // ToolBox_Panel
             // 
-            this.panel1.Controls.Add(this.Sex_CBB);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.AccountType_Cbb);
-            this.panel1.Controls.Add(this.Birth_DT);
-            this.panel1.Controls.Add(this.FullName_Txtb);
-            this.panel1.Controls.Add(this.ConfirmPass_Txtb);
-            this.panel1.Controls.Add(this.PassWord_Txtb);
-            this.panel1.Controls.Add(this.UserName_Txtb);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 201);
-            this.panel1.TabIndex = 1;
+            this.ToolBox_Panel.Controls.Add(this.label8);
+            this.ToolBox_Panel.Controls.Add(this.Sex_CBB);
+            this.ToolBox_Panel.Controls.Add(this.label7);
+            this.ToolBox_Panel.Controls.Add(this.button2);
+            this.ToolBox_Panel.Controls.Add(this.button1);
+            this.ToolBox_Panel.Controls.Add(this.AccountType_Cbb);
+            this.ToolBox_Panel.Controls.Add(this.Birth_DT);
+            this.ToolBox_Panel.Controls.Add(this.FullName_Txtb);
+            this.ToolBox_Panel.Controls.Add(this.ConfirmPass_Txtb);
+            this.ToolBox_Panel.Controls.Add(this.PassWord_Txtb);
+            this.ToolBox_Panel.Controls.Add(this.UserName_Txtb);
+            this.ToolBox_Panel.Controls.Add(this.label6);
+            this.ToolBox_Panel.Controls.Add(this.label5);
+            this.ToolBox_Panel.Controls.Add(this.label4);
+            this.ToolBox_Panel.Controls.Add(this.label3);
+            this.ToolBox_Panel.Controls.Add(this.label2);
+            this.ToolBox_Panel.Controls.Add(this.label1);
+            this.ToolBox_Panel.Location = new System.Drawing.Point(0, 41);
+            this.ToolBox_Panel.Name = "ToolBox_Panel";
+            this.ToolBox_Panel.Size = new System.Drawing.Size(659, 201);
+            this.ToolBox_Panel.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(461, 188);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(201, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "(*) Trường thông tin không được bỏ trống";
             // 
             // Sex_CBB
             // 
+            this.Sex_CBB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Sex_CBB.FormattingEnabled = true;
             this.Sex_CBB.Items.AddRange(new object[] {
             "Nam",
@@ -120,9 +145,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(353, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 16);
+            this.label7.Size = new System.Drawing.Size(68, 16);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Giới tính";
+            this.label7.Text = "Giới tính(*)";
             // 
             // button2
             // 
@@ -144,7 +169,11 @@
             // 
             // AccountType_Cbb
             // 
+            this.AccountType_Cbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AccountType_Cbb.FormattingEnabled = true;
+            this.AccountType_Cbb.Items.AddRange(new object[] {
+            "Quản trị",
+            "Nhân viên"});
             this.AccountType_Cbb.Location = new System.Drawing.Point(463, 149);
             this.AccountType_Cbb.Name = "AccountType_Cbb";
             this.AccountType_Cbb.Size = new System.Drawing.Size(186, 21);
@@ -245,12 +274,75 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập(*)";
             // 
+            // AddSaveDe_Panel
+            // 
+            this.AddSaveDe_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AddSaveDe_Panel.Controls.Add(this.Save_Btn);
+            this.AddSaveDe_Panel.Controls.Add(this.Cancel_Btn);
+            this.AddSaveDe_Panel.Controls.Add(this.Delete_Btn);
+            this.AddSaveDe_Panel.Controls.Add(this.Edit_Btn);
+            this.AddSaveDe_Panel.Controls.Add(this.Add_Btn);
+            this.AddSaveDe_Panel.Location = new System.Drawing.Point(0, 0);
+            this.AddSaveDe_Panel.Name = "AddSaveDe_Panel";
+            this.AddSaveDe_Panel.Size = new System.Drawing.Size(665, 41);
+            this.AddSaveDe_Panel.TabIndex = 2;
+            // 
+            // Save_Btn
+            // 
+            this.Save_Btn.Location = new System.Drawing.Point(485, 3);
+            this.Save_Btn.Name = "Save_Btn";
+            this.Save_Btn.Size = new System.Drawing.Size(81, 32);
+            this.Save_Btn.TabIndex = 3;
+            this.Save_Btn.Text = "Lưu ";
+            this.Save_Btn.UseVisualStyleBackColor = true;
+            // 
+            // Cancel_Btn
+            // 
+            this.Cancel_Btn.Location = new System.Drawing.Point(572, 3);
+            this.Cancel_Btn.Name = "Cancel_Btn";
+            this.Cancel_Btn.Size = new System.Drawing.Size(81, 32);
+            this.Cancel_Btn.TabIndex = 1;
+            this.Cancel_Btn.Text = "Quay lại";
+            this.Cancel_Btn.UseVisualStyleBackColor = true;
+            this.Cancel_Btn.Click += new System.EventHandler(this.Cancel_Btn_Click);
+            // 
+            // Delete_Btn
+            // 
+            this.Delete_Btn.Location = new System.Drawing.Point(174, 3);
+            this.Delete_Btn.Name = "Delete_Btn";
+            this.Delete_Btn.Size = new System.Drawing.Size(81, 32);
+            this.Delete_Btn.TabIndex = 2;
+            this.Delete_Btn.Text = "Xoá";
+            this.Delete_Btn.UseVisualStyleBackColor = true;
+            this.Delete_Btn.Click += new System.EventHandler(this.Delete_Btn_Click);
+            // 
+            // Edit_Btn
+            // 
+            this.Edit_Btn.Location = new System.Drawing.Point(87, 3);
+            this.Edit_Btn.Name = "Edit_Btn";
+            this.Edit_Btn.Size = new System.Drawing.Size(81, 32);
+            this.Edit_Btn.TabIndex = 1;
+            this.Edit_Btn.Text = "Sửa";
+            this.Edit_Btn.UseVisualStyleBackColor = true;
+            this.Edit_Btn.Click += new System.EventHandler(this.Edit_Btn_Click);
+            // 
+            // Add_Btn
+            // 
+            this.Add_Btn.Location = new System.Drawing.Point(0, 3);
+            this.Add_Btn.Name = "Add_Btn";
+            this.Add_Btn.Size = new System.Drawing.Size(81, 32);
+            this.Add_Btn.TabIndex = 0;
+            this.Add_Btn.Text = "Thêm ";
+            this.Add_Btn.UseVisualStyleBackColor = true;
+            this.Add_Btn.Click += new System.EventHandler(this.Add_Btn_Click);
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "Mã nhân viên";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // Username
             // 
@@ -259,12 +351,12 @@
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
             // 
-            // Name
+            // FullName
             // 
-            this.Name.DataPropertyName = "Ten";
-            this.Name.HeaderText = "Họ và tên";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.FullName.DataPropertyName = "Ten";
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
             // 
             // Birth
             // 
@@ -280,24 +372,42 @@
             this.Sex.Name = "Sex";
             this.Sex.ReadOnly = true;
             // 
-            // AccounType
+            // AccountType
             // 
-            this.AccounType.DataPropertyName = "LoaiTaiKhoan";
-            this.AccounType.HeaderText = "Loại tài khoản";
-            this.AccounType.Name = "AccounType";
-            this.AccounType.ReadOnly = true;
+            this.AccountType.DataPropertyName = "LoaiTaiKhoan";
+            this.AccountType.HeaderText = "Loại tài khoản";
+            this.AccountType.Name = "AccountType";
+            this.AccountType.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Pass";
+            this.Password.HeaderText = "matkhau";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            // 
+            // ConfirmPass
+            // 
+            this.ConfirmPass.DataPropertyName = "Pass";
+            this.ConfirmPass.HeaderText = "xacnhamatkhau";
+            this.ConfirmPass.Name = "ConfirmPass";
+            this.ConfirmPass.ReadOnly = true;
+            this.ConfirmPass.Visible = false;
             // 
             // UC_StaffMana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.AddSaveDe_Panel);
+            this.Controls.Add(this.ToolBox_Panel);
             this.Controls.Add(this.AccountInfo_Dtgrv);
-            this.Name.Name = "UC_StaffMana";
-            this.Size = new System.Drawing.Size(665, 409);
+            this.Name = "UC_StaffMana";
+            this.Size = new System.Drawing.Size(660, 441);
             ((System.ComponentModel.ISupportInitialize)(this.AccountInfo_Dtgrv)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ToolBox_Panel.ResumeLayout(false);
+            this.ToolBox_Panel.PerformLayout();
+            this.AddSaveDe_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -305,7 +415,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView AccountInfo_Dtgrv;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ToolBox_Panel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -322,11 +432,20 @@
         private System.Windows.Forms.TextBox UserName_Txtb;
         private System.Windows.Forms.ComboBox Sex_CBB;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel AddSaveDe_Panel;
+        private System.Windows.Forms.Button Save_Btn;
+        private System.Windows.Forms.Button Cancel_Btn;
+        private System.Windows.Forms.Button Delete_Btn;
+        private System.Windows.Forms.Button Edit_Btn;
+        private System.Windows.Forms.Button Add_Btn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AccounType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccountType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConfirmPass;
     }
 }

@@ -47,7 +47,7 @@ namespace ParkingManagement_DAL
         public DataSet Get()
         {
             DataSet data = new DataSet();
-            string Select_all = "SELECT NhanVien.ID, NhanVien.Ten,NhanVien.NgaySinh,NhanVien.GIOITINH, TaiKhoan.Username, TaiKhoan.LoaiTaiKhoan from TaiKhoan, NhanVien WHERE TaiKhoan.ID=NhanVien.ID";
+            string Select_all = "SELECT NhanVien.ID, NhanVien.Ten,NhanVien.NgaySinh,NhanVien.GIOITINH, TaiKhoan.Username,TaiKhoan.Pass,TaiKhoan.LoaiTaiKhoan from TaiKhoan, NhanVien WHERE TaiKhoan.ID=NhanVien.ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 connection.Open();

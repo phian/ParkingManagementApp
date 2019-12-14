@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ParkingManagement_DAL;
 namespace ParkingManagement_BUS
 {
-    class Staff_Info_BUS
+    public class Staff_Info_BUS
     {
         Staff_Info_DAL temp = new Staff_Info_DAL();
 
