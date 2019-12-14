@@ -54,8 +54,9 @@
             this.OutVehicleLB = new System.Windows.Forms.Label();
             this.btnConfig = new System.Windows.Forms.Button();
             this.ScanCameraPB = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ScanCamLB = new System.Windows.Forms.Label();
             this.ScanCamTimer = new System.Windows.Forms.Timer(this.components);
+            this.StartScanCodeBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).BeginInit();
@@ -320,35 +321,45 @@
             // 
             this.ScanCameraPB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ScanCameraPB.BackColor = System.Drawing.SystemColors.Control;
-            this.ScanCameraPB.Location = new System.Drawing.Point(663, 364);
+            this.ScanCameraPB.Location = new System.Drawing.Point(630, 365);
             this.ScanCameraPB.Name = "ScanCameraPB";
             this.ScanCameraPB.Size = new System.Drawing.Size(274, 264);
             this.ScanCameraPB.TabIndex = 2;
             this.ScanCameraPB.TabStop = false;
             // 
-            // label5
+            // ScanCamLB
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(658, 327);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 25);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Ảnh thẻ xe";
+            this.ScanCamLB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ScanCamLB.AutoSize = true;
+            this.ScanCamLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScanCamLB.Location = new System.Drawing.Point(625, 327);
+            this.ScanCamLB.Name = "ScanCamLB";
+            this.ScanCamLB.Size = new System.Drawing.Size(115, 25);
+            this.ScanCamLB.TabIndex = 22;
+            this.ScanCamLB.Text = "Ảnh thẻ xe";
             // 
             // ScanCamTimer
             // 
-            this.ScanCamTimer.Interval = 1;
             this.ScanCamTimer.Tick += new System.EventHandler(this.ScanCamTimer_Tick);
+            // 
+            // StartScanCodeBut
+            // 
+            this.StartScanCodeBut.Location = new System.Drawing.Point(746, 327);
+            this.StartScanCodeBut.Name = "StartScanCodeBut";
+            this.StartScanCodeBut.Size = new System.Drawing.Size(104, 30);
+            this.StartScanCodeBut.TabIndex = 28;
+            this.StartScanCodeBut.Text = "Scan Code";
+            this.StartScanCodeBut.UseVisualStyleBackColor = true;
+            this.StartScanCodeBut.Click += new System.EventHandler(this.StartScanCodeBut_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 641);
+            this.Controls.Add(this.StartScanCodeBut);
             this.Controls.Add(this.btnConfig);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ScanCamLB);
             this.Controls.Add(this.OutVehicleLB);
             this.Controls.Add(this.OutputCameraLB);
             this.Controls.Add(this.InVehicleLB);
@@ -416,7 +427,8 @@
         private System.Windows.Forms.Label OutVehicleLB;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.PictureBox ScanCameraPB;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ScanCamLB;
         private System.Windows.Forms.Timer ScanCamTimer;
+        private System.Windows.Forms.Button StartScanCodeBut;
     }
 }

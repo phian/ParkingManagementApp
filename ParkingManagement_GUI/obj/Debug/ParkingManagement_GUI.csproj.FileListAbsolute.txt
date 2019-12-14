@@ -80,3 +80,9 @@ C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\obj\D
 C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CopyComplete
 C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
 C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.presentation.dll
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.xml
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.presentation.pdb
+D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.presentation.xml
