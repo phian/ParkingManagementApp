@@ -18,8 +18,8 @@ namespace ParkingManagement_GUI
 {
     public partial class MainForm : Form
     {
-        FilterInfoCollection CaptureDevice;
-        VideoCaptureDevice CamIN,CamOUT,CamScan;
+        FilterInfoCollection CaptureDevice; // variable use to get all webcam from device
+        VideoCaptureDevice CamIN,CamOUT,CamScan; // Camera for in and out vehicle and scan QR code
 
         int inCamPosition = -1, outCamPosition = -1, scanCamPosition = -1;
         string previousCode = ""; // save previous code to use for event tick of scan timer
@@ -29,6 +29,7 @@ namespace ParkingManagement_GUI
             InitializeComponent();
         }
 
+        // event when MainForm starting
         private void MainForm_Load(object sender, EventArgs e)
         {
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice); // set up input type
@@ -66,16 +67,21 @@ namespace ParkingManagement_GUI
             InputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
+        // Out vehicle camera
+        // event to update frame for picturebox view out vehicle camera
         private void CamOUT_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             OutputCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
+        // Scan camera
+        // event to update frame for picturebox scan QR code from vehicle ticket
         private void CamScan_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             ScanCameraPB.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
+        // event to start scan camera timer
         private void StartScanCodeBut_Click(object sender, EventArgs e)
         {
             if (ScanCameraPB.Image != null)
@@ -85,6 +91,7 @@ namespace ParkingManagement_GUI
             }
         }
 
+        // event for timer to scan QR code on vehicle ticket
         private void ScanCamTimer_Tick(object sender, EventArgs e)
         {
             BarcodeReader Reader = new BarcodeReader();
@@ -110,6 +117,7 @@ namespace ParkingManagement_GUI
             }
         }
 
+        // event for set up camera button click
         private void btnConfig_Click(object sender, EventArgs e)
         {
             CameraManageForm ManageForm = new CameraManageForm(inCamPosition, outCamPosition, scanCamPosition);
@@ -120,6 +128,7 @@ namespace ParkingManagement_GUI
             ManageForm.StopCamera += ManageForm_StopCamera;
         }
 
+        // method use for stop and reset camera position in choose camera combobox
         private void ManageForm_StopCamera()
         {
             CamIN.SignalToStop();
@@ -138,7 +147,6 @@ namespace ParkingManagement_GUI
             ScanCameraPB.Image = null;
         }
 
-
         // event when user out the main form
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -152,6 +160,5 @@ namespace ParkingManagement_GUI
                 CamScan.WaitForStop();
             }
         }
-
     }
 }
