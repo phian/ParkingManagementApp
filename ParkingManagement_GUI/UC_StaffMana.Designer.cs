@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement_GUI
 {
-    partial class UC_StaffManage
+    partial class UC_StaffMana
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,6 +30,8 @@
         {
             this.AccountInfo_Dtgrv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Sex_CBB = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AccountType_Cbb = new System.Windows.Forms.ComboBox();
@@ -44,20 +46,44 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccounType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AccountInfo_Dtgrv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AccountInfo_Dtgrv
             // 
+            this.AccountInfo_Dtgrv.AllowUserToAddRows = false;
+            this.AccountInfo_Dtgrv.AllowUserToDeleteRows = false;
+            this.AccountInfo_Dtgrv.AllowUserToResizeColumns = false;
+            this.AccountInfo_Dtgrv.AllowUserToResizeRows = false;
+            this.AccountInfo_Dtgrv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AccountInfo_Dtgrv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.AccountInfo_Dtgrv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.AccountInfo_Dtgrv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AccountInfo_Dtgrv.Location = new System.Drawing.Point(3, 210);
+            this.AccountInfo_Dtgrv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Username,
+            this.Name,
+            this.Birth,
+            this.Sex,
+            this.AccounType});
+            this.AccountInfo_Dtgrv.Location = new System.Drawing.Point(0, 210);
             this.AccountInfo_Dtgrv.Name = "AccountInfo_Dtgrv";
+            this.AccountInfo_Dtgrv.ReadOnly = true;
             this.AccountInfo_Dtgrv.Size = new System.Drawing.Size(659, 196);
             this.AccountInfo_Dtgrv.TabIndex = 0;
+            this.AccountInfo_Dtgrv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountInfo_Dtgrv_CellClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Sex_CBB);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.AccountType_Cbb);
@@ -76,6 +102,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 201);
             this.panel1.TabIndex = 1;
+            // 
+            // Sex_CBB
+            // 
+            this.Sex_CBB.FormattingEnabled = true;
+            this.Sex_CBB.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.Sex_CBB.Location = new System.Drawing.Point(463, 107);
+            this.Sex_CBB.Name = "Sex_CBB";
+            this.Sex_CBB.Size = new System.Drawing.Size(52, 21);
+            this.Sex_CBB.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(353, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Giới tính";
             // 
             // button2
             // 
@@ -105,7 +152,7 @@
             // 
             // Birth_DT
             // 
-            this.Birth_DT.Location = new System.Drawing.Point(463, 86);
+            this.Birth_DT.Location = new System.Drawing.Point(463, 66);
             this.Birth_DT.Name = "Birth_DT";
             this.Birth_DT.Size = new System.Drawing.Size(186, 20);
             this.Birth_DT.TabIndex = 10;
@@ -162,7 +209,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(353, 90);
+            this.label4.Location = new System.Drawing.Point(353, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 16);
             this.label4.TabIndex = 3;
@@ -198,13 +245,55 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập(*)";
             // 
-            // UC_StaffManage
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Mã nhân viên";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Tên đăng nhập";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Ten";
+            this.Name.HeaderText = "Họ và tên";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Birth
+            // 
+            this.Birth.DataPropertyName = "NGAYSINH";
+            this.Birth.HeaderText = "Ngày sinh";
+            this.Birth.Name = "Birth";
+            this.Birth.ReadOnly = true;
+            // 
+            // Sex
+            // 
+            this.Sex.DataPropertyName = "GIOITINH";
+            this.Sex.HeaderText = "Giới tính";
+            this.Sex.Name = "Sex";
+            this.Sex.ReadOnly = true;
+            // 
+            // AccounType
+            // 
+            this.AccounType.DataPropertyName = "LoaiTaiKhoan";
+            this.AccounType.HeaderText = "Loại tài khoản";
+            this.AccounType.Name = "AccounType";
+            this.AccounType.ReadOnly = true;
+            // 
+            // UC_StaffMana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.AccountInfo_Dtgrv);
-            this.Name = "UC_StaffManage";
+            this.Name.Name = "UC_StaffMana";
             this.Size = new System.Drawing.Size(665, 409);
             ((System.ComponentModel.ISupportInitialize)(this.AccountInfo_Dtgrv)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -231,5 +320,13 @@
         private System.Windows.Forms.TextBox ConfirmPass_Txtb;
         private System.Windows.Forms.TextBox PassWord_Txtb;
         private System.Windows.Forms.TextBox UserName_Txtb;
+        private System.Windows.Forms.ComboBox Sex_CBB;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccounType;
     }
 }

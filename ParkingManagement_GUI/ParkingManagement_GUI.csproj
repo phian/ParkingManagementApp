@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ParkingManagement_GUI</RootNamespace>
     <AssemblyName>ParkingManagement_GUI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -61,11 +61,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_StaffManage.cs">
+    <Compile Include="UC_StaffMana.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_StaffManage.Designer.cs">
-      <DependentUpon>UC_StaffManage.cs</DependentUpon>
+    <Compile Include="UC_StaffMana.Designer.cs">
+      <DependentUpon>UC_StaffMana.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -83,8 +83,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_StaffManage.resx">
-      <DependentUpon>UC_StaffManage.cs</DependentUpon>
+    <EmbeddedResource Include="UC_StaffMana.resx">
+      <DependentUpon>UC_StaffMana.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

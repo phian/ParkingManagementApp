@@ -23,7 +23,7 @@ namespace ParkingManagement_GUI
             Staff_acti_Panel.Controls.Clear();
             Staff_acti_Panel.Controls.Add(StaffManage);
         }
-        UC_StaffManage StaffManage = new UC_StaffManage();
+        UC_StaffMana StaffManage = new UC_StaffMana();
         private void Staff_Only_Form_Load(object sender, EventArgs e)
         {
             AddSaveDe_Panel.Visible = false;

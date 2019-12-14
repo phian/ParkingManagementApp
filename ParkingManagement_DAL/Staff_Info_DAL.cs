@@ -45,7 +45,6 @@ namespace ParkingManagement_DAL
                     Staff.ID = (int)Data_reader["ID"];
                     Staff.TEN = (string)Data_reader["Ten"]; // đọc dữ liệu đã truy xuất
                     Staff.NGAYSINH = (DateTime)Data_reader["NgaySinh"];
-                    Staff.ID_taikhoan = (int)Data_reader["ID_taikhoan"];
                     List_Info.Add(Staff); // Lưu dữ liệu đã đọc vào list "Info"
                 }
 
@@ -53,9 +52,9 @@ namespace ParkingManagement_DAL
             }
         }
         //Hàm thêm thông tin 1 nhân viên mới vào cơ sở dữ liệu
-        public void Add_New_Staff_Info(string FULLNAME, string DOB,string ID_TaiKhoan)
+        public void Add_New_Staff_Info(string FULLNAME, string DOB,int ID_TaiKhoan)
         {
-            string Insert_into = "INSERT INTO NhanVien VALUES (@FULLNAME, @DOB,@ID_TaiKhoan)";
+            string Insert_into = "INSERT INTO NhanVien VALUES (@FULLNAME, @DOB)";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
                 try
@@ -64,9 +63,10 @@ namespace ParkingManagement_DAL
                     SqlCommand cmdSetDateFormat = new SqlCommand("SET DATEFORMAT DMY", connection);
                     cmdSetDateFormat.ExecuteNonQuery();
                     SqlCommand cmdInsert = new SqlCommand(Insert_into, connection);
+                  
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
                     cmdInsert.Parameters.Add("@DOB", SqlDbType.Date).Value = DOB;
-                    cmdInsert.Parameters.Add("@ID_TaiKhoan",SqlDbType.VarChar).Value=ID_TaiKhoan;
+                   
                     cmdInsert.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Thêm dữ liệu thành công!");
@@ -78,7 +78,7 @@ namespace ParkingManagement_DAL
             }
         }
         //Hàm thay đổi thông tin 1 nhân viên trong cơ sở dữ liệu
-        public void Update_Staff_Info(int id, string FULLNAME, string DOB,int ID_TaiKhoan)
+        public void Update_Staff_Info(int id, string FULLNAME, string DOB)
         {
             string Update_set = "UPDATE NhanVien SET Ten=@FULLNAME, NgaySinh=@DOB WHERE ID=@ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
@@ -89,7 +89,7 @@ namespace ParkingManagement_DAL
                     SqlCommand cmdSetDateFormat = new SqlCommand("SET DATEFORMAT DMY", connection);
                     cmdSetDateFormat.ExecuteNonQuery();
                     SqlCommand cmdInsert = new SqlCommand(Update_set, connection);
-                    cmdInsert.Parameters.Add("@ID_TaiKhoan", SqlDbType.VarChar).Value = ID_TaiKhoan;
+      
                     cmdInsert.Parameters.Add("@FULLNAME", SqlDbType.NVarChar).Value = FULLNAME;
                     cmdInsert.Parameters.Add("@DOB", SqlDbType.SmallDateTime).Value = DOB;
                     cmdInsert.ExecuteNonQuery();
@@ -103,7 +103,7 @@ namespace ParkingManagement_DAL
             }
         }
         //Hàm xoá thông tin 1 nhân viên khỏi cơ sở dữ liệu
-        public void Delete_Staff_Info(string ID)
+        public void Delete_Staff_Info(int ID)
         {
             string Delete_from = "DELETE FROM NhanVien WHERE ID=@ID";
             using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))

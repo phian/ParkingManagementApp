@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Staff_Account_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff_Info_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParkingManagement_DAL\ParkingManagement_DAL.csproj">
