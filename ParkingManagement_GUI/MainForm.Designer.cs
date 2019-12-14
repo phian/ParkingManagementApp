@@ -51,9 +51,9 @@
             this.InVehicleLB = new System.Windows.Forms.Label();
             this.OutputCameraLB = new System.Windows.Forms.Label();
             this.OutVehicleLB = new System.Windows.Forms.Label();
-            this.ActionModeCB = new System.Windows.Forms.ComboBox();
             this.ClearImgButton = new System.Windows.Forms.Button();
             this.CaptureButton = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).BeginInit();
@@ -279,15 +279,6 @@
             this.OutVehicleLB.TabIndex = 22;
             this.OutVehicleLB.Text = "Ảnh xe ra";
             // 
-            // ActionModeCB
-            // 
-            this.ActionModeCB.FormattingEnabled = true;
-            this.ActionModeCB.Location = new System.Drawing.Point(831, 28);
-            this.ActionModeCB.Name = "ActionModeCB";
-            this.ActionModeCB.Size = new System.Drawing.Size(94, 21);
-            this.ActionModeCB.TabIndex = 26;
-            this.ActionModeCB.SelectedIndexChanged += new System.EventHandler(this.ActionModeCB_SelectedIndexChanged);
-            // 
             // ClearImgButton
             // 
             this.ClearImgButton.Location = new System.Drawing.Point(730, 12);
@@ -306,12 +297,22 @@
             this.CaptureButton.Text = "Capture";
             this.CaptureButton.UseVisualStyleBackColor = true;
             // 
+            // btnConfig
+            // 
+            this.btnConfig.Location = new System.Drawing.Point(831, 22);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnConfig.TabIndex = 27;
+            this.btnConfig.Text = "Thiết lập";
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 641);
-            this.Controls.Add(this.ActionModeCB);
+            this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.ClearImgButton);
             this.Controls.Add(this.CaptureButton);
             this.Controls.Add(this.OutVehicleLB);
@@ -377,8 +378,8 @@
         private System.Windows.Forms.Label InVehicleLB;
         private System.Windows.Forms.Label OutputCameraLB;
         private System.Windows.Forms.Label OutVehicleLB;
-        private System.Windows.Forms.ComboBox ActionModeCB;
         private System.Windows.Forms.Button ClearImgButton;
         private System.Windows.Forms.Button CaptureButton;
+        private System.Windows.Forms.Button btnConfig;
     }
 }

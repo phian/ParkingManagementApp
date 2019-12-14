@@ -36,6 +36,7 @@
             this.UserNameTxb = new System.Windows.Forms.TextBox();
             this.LoginHeaderImage = new System.Windows.Forms.PictureBox();
             this.LoginScreenMainImg = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNamePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginHeaderImage)).BeginInit();
@@ -122,11 +123,22 @@
             this.LoginScreenMainImg.TabStop = false;
             this.LoginScreenMainImg.Click += new System.EventHandler(this.LoginScreenMainImg_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(713, 415);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 16;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.PasswordPB);
             this.Controls.Add(this.UserNamePB);
             this.Controls.Add(this.LoginButton);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.TextBox UserNameTxb;
         private System.Windows.Forms.PictureBox LoginHeaderImage;
         private System.Windows.Forms.PictureBox LoginScreenMainImg;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

@@ -21,3 +21,41 @@ D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.pdb
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.pdb
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.CameraManageForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe.config
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.pdb
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.dll
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.dll
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.pdb
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.pdb
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.Video.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csprojAssemblyReference.cache
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.CameraManageForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.LoginForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.MainForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.Properties.Resources.resources
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.GenerateResource.cache
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CopyComplete
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe.config
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.exe
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_GUI.pdb
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.dll
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.dll
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_BUS.pdb
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ParkingManagement_DTO.pdb
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.xml
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.Video.xml
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csprojAssemblyReference.cache
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.CameraManageForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.LoginForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.MainForm.resources
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.Properties.Resources.resources
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.GenerateResource.cache
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.csproj.CopyComplete
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.exe
+C:\Users\duyhk\Downloads\ParkingManagementAppEdit\ParkingManagementApp-master\ParkingManagement_GUI\obj\Debug\ParkingManagement_GUI.pdb
