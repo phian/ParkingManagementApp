@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.AccountInfo_Dtgrv = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfirmPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ToolBox_Panel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.Sex_CBB = new System.Windows.Forms.ComboBox();
@@ -53,14 +61,6 @@
             this.Delete_Btn = new System.Windows.Forms.Button();
             this.Edit_Btn = new System.Windows.Forms.Button();
             this.Add_Btn = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccountType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConfirmPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AccountInfo_Dtgrv)).BeginInit();
             this.ToolBox_Panel.SuspendLayout();
             this.AddSaveDe_Panel.SuspendLayout();
@@ -92,6 +92,65 @@
             this.AccountInfo_Dtgrv.TabIndex = 0;
             this.AccountInfo_Dtgrv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountInfo_Dtgrv_RowEnter);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Mã nhân viên";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Tên đăng nhập";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "Ten";
+            this.FullName.HeaderText = "Họ và tên";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // Birth
+            // 
+            this.Birth.DataPropertyName = "NGAYSINH";
+            this.Birth.HeaderText = "Ngày sinh";
+            this.Birth.Name = "Birth";
+            this.Birth.ReadOnly = true;
+            // 
+            // Sex
+            // 
+            this.Sex.DataPropertyName = "GIOITINH";
+            this.Sex.HeaderText = "Giới tính";
+            this.Sex.Name = "Sex";
+            this.Sex.ReadOnly = true;
+            // 
+            // AccountType
+            // 
+            this.AccountType.DataPropertyName = "LoaiTaiKhoan";
+            this.AccountType.HeaderText = "Loại tài khoản";
+            this.AccountType.Name = "AccountType";
+            this.AccountType.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Pass";
+            this.Password.HeaderText = "matkhau";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Visible = false;
+            // 
+            // ConfirmPass
+            // 
+            this.ConfirmPass.DataPropertyName = "Pass";
+            this.ConfirmPass.HeaderText = "xacnhamatkhau";
+            this.ConfirmPass.Name = "ConfirmPass";
+            this.ConfirmPass.ReadOnly = true;
+            this.ConfirmPass.Visible = false;
+            // 
             // ToolBox_Panel
             // 
             this.ToolBox_Panel.Controls.Add(this.label8);
@@ -113,7 +172,7 @@
             this.ToolBox_Panel.Controls.Add(this.label1);
             this.ToolBox_Panel.Location = new System.Drawing.Point(0, 41);
             this.ToolBox_Panel.Name = "ToolBox_Panel";
-            this.ToolBox_Panel.Size = new System.Drawing.Size(659, 201);
+            this.ToolBox_Panel.Size = new System.Drawing.Size(660, 201);
             this.ToolBox_Panel.TabIndex = 1;
             // 
             // label8
@@ -294,112 +353,68 @@
             // 
             // Save_Btn
             // 
+            this.Save_Btn.BackColor = System.Drawing.Color.White;
+            this.Save_Btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Save_Btn.Location = new System.Drawing.Point(485, 3);
             this.Save_Btn.Name = "Save_Btn";
             this.Save_Btn.Size = new System.Drawing.Size(81, 32);
             this.Save_Btn.TabIndex = 3;
             this.Save_Btn.Text = "Lưu ";
-            this.Save_Btn.UseVisualStyleBackColor = true;
+            this.Save_Btn.UseVisualStyleBackColor = false;
             this.Save_Btn.Click += new System.EventHandler(this.Save_Btn_Click);
             // 
             // Cancel_Btn
             // 
+            this.Cancel_Btn.BackColor = System.Drawing.Color.White;
+            this.Cancel_Btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Cancel_Btn.Location = new System.Drawing.Point(572, 3);
             this.Cancel_Btn.Name = "Cancel_Btn";
             this.Cancel_Btn.Size = new System.Drawing.Size(81, 32);
             this.Cancel_Btn.TabIndex = 1;
             this.Cancel_Btn.Text = "Quay lại";
-            this.Cancel_Btn.UseVisualStyleBackColor = true;
+            this.Cancel_Btn.UseVisualStyleBackColor = false;
             this.Cancel_Btn.Click += new System.EventHandler(this.Cancel_Btn_Click);
             // 
             // Delete_Btn
             // 
+            this.Delete_Btn.BackColor = System.Drawing.Color.White;
+            this.Delete_Btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Delete_Btn.Location = new System.Drawing.Point(174, 3);
             this.Delete_Btn.Name = "Delete_Btn";
             this.Delete_Btn.Size = new System.Drawing.Size(81, 32);
             this.Delete_Btn.TabIndex = 2;
             this.Delete_Btn.Text = "Xoá";
-            this.Delete_Btn.UseVisualStyleBackColor = true;
+            this.Delete_Btn.UseVisualStyleBackColor = false;
             this.Delete_Btn.Click += new System.EventHandler(this.Delete_Btn_Click);
             // 
             // Edit_Btn
             // 
+            this.Edit_Btn.BackColor = System.Drawing.Color.White;
+            this.Edit_Btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Edit_Btn.Location = new System.Drawing.Point(87, 3);
             this.Edit_Btn.Name = "Edit_Btn";
             this.Edit_Btn.Size = new System.Drawing.Size(81, 32);
             this.Edit_Btn.TabIndex = 1;
             this.Edit_Btn.Text = "Sửa";
-            this.Edit_Btn.UseVisualStyleBackColor = true;
+            this.Edit_Btn.UseVisualStyleBackColor = false;
             this.Edit_Btn.Click += new System.EventHandler(this.Edit_Btn_Click);
             // 
             // Add_Btn
             // 
+            this.Add_Btn.BackColor = System.Drawing.Color.White;
+            this.Add_Btn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Add_Btn.Location = new System.Drawing.Point(0, 3);
             this.Add_Btn.Name = "Add_Btn";
             this.Add_Btn.Size = new System.Drawing.Size(81, 32);
             this.Add_Btn.TabIndex = 0;
             this.Add_Btn.Text = "Thêm ";
-            this.Add_Btn.UseVisualStyleBackColor = true;
+            this.Add_Btn.UseVisualStyleBackColor = false;
             this.Add_Btn.Click += new System.EventHandler(this.Add_Btn_Click);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "Mã nhân viên";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Tên đăng nhập";
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "Ten";
-            this.FullName.HeaderText = "Họ và tên";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // Birth
-            // 
-            this.Birth.DataPropertyName = "NGAYSINH";
-            this.Birth.HeaderText = "Ngày sinh";
-            this.Birth.Name = "Birth";
-            this.Birth.ReadOnly = true;
-            // 
-            // Sex
-            // 
-            this.Sex.DataPropertyName = "GIOITINH";
-            this.Sex.HeaderText = "Giới tính";
-            this.Sex.Name = "Sex";
-            this.Sex.ReadOnly = true;
-            // 
-            // AccountType
-            // 
-            this.AccountType.DataPropertyName = "LoaiTaiKhoan";
-            this.AccountType.HeaderText = "Loại tài khoản";
-            this.AccountType.Name = "AccountType";
-            this.AccountType.ReadOnly = true;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Pass";
-            this.Password.HeaderText = "matkhau";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            this.Password.Visible = false;
-            // 
-            // ConfirmPass
-            // 
-            this.ConfirmPass.DataPropertyName = "Pass";
-            this.ConfirmPass.HeaderText = "xacnhamatkhau";
-            this.ConfirmPass.Name = "ConfirmPass";
-            this.ConfirmPass.ReadOnly = true;
-            this.ConfirmPass.Visible = false;
             // 
             // UC_StaffMana
             // 

@@ -18,8 +18,10 @@ namespace ParkingManagement_GUI
 
             this.ActiveControl = UserNamePB;
         }
+        
         Staff_Account_BUS Staff = new Staff_Account_BUS();
-        Staff_Only_Form staff_only = new Staff_Only_Form(); 
+        MainForm main_form;
+
         // event when user enter the textbox
         private void UserNameTxb_Enter(object sender, EventArgs e)
         {
@@ -93,7 +95,9 @@ namespace ParkingManagement_GUI
             if (Staff.LoginAccount(UserNameTxb.Text, PasswordTxb.Text) == 0|| Staff.LoginAccount(UserNameTxb.Text, PasswordTxb.Text) == 1)
             {
                 this.Hide();
-                staff_only.ShowDialog();
+                main_form = new MainForm();
+                main_form.Account_Type = Staff.LoginAccount(UserNameTxb.Text, PasswordTxb.Text);
+                main_form.ShowDialog();
                 this.Show();
             }
             else

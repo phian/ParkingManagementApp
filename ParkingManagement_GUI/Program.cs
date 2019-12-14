@@ -16,7 +16,7 @@ namespace ParkingManagement_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Staff_Only_Form());
+            Application.Run(new LoginForm());
         }
     }
 }

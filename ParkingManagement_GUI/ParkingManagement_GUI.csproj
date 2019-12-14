@@ -53,6 +53,17 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Staff_Only_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Note.Designer.cs">
+      <DependentUpon>UC_Note.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_StaffMana.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,19 +87,20 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff_Only_Form.resx">
       <DependentUpon>Staff_Only_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="UC_Note.resx">
+      <DependentUpon>UC_Note.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_StaffMana.resx">
       <DependentUpon>UC_StaffMana.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +129,39 @@
       <Project>{c76e07ce-598e-419a-ba47-cb664e28c2f3}</Project>
       <Name>ParkingManagement_DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note-resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-resize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
