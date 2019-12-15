@@ -86,3 +86,25 @@ D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.xml
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.presentation.pdb
 D:\source\Phương pháp phần mềm hướng đối tượng\ParkingManagement\ParkingManagement_GUI\bin\Debug\zxing.presentation.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.dll
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.presentation.dll
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\ZedGraph.dll
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\Emgu.CV.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\Emgu.CV.ML.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\Emgu.CV.UI.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\Emgu.Util.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.pdb
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.xml
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.presentation.pdb
+C:\Users\duyhk\Downloads\ParkingManagementApp-master\ParkingManagementApp-master\ParkingManagement_GUI\bin\Debug\zxing.presentation.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.dll
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.presentation.dll
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\ZedGraph.dll
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\Emgu.CV.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\Emgu.CV.ML.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\Emgu.CV.UI.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\Emgu.Util.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.pdb
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.xml
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.presentation.pdb
+C:\Users\duyhk\Documents\GitHub\ParkingManagementApp\ParkingManagement_GUI\bin\Debug\zxing.presentation.xml

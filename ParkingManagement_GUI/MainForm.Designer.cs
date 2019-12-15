@@ -33,16 +33,16 @@
             this.InVehiclePB = new System.Windows.Forms.PictureBox();
             this.OutputCameraPB = new System.Windows.Forms.PictureBox();
             this.OutVehiclePB = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_BiensoVAO = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_BiensoRA = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_BiensoVAO = new System.Windows.Forms.TextBox();
+            this.text_BiensoRA = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBSystemClock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,17 +57,16 @@
             this.ScanCamLB = new System.Windows.Forms.Label();
             this.ScanCamTimer = new System.Windows.Forms.Timer(this.components);
             this.StartScanCodeBut = new System.Windows.Forms.Button();
+            this.SystemClock = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InputCameraPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutVehiclePB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BiensoVAO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BiensoRA)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScanCameraPB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,8 +85,10 @@
             this.InVehiclePB.Location = new System.Drawing.Point(320, 53);
             this.InVehiclePB.Name = "InVehiclePB";
             this.InVehiclePB.Size = new System.Drawing.Size(274, 264);
+            this.InVehiclePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.InVehiclePB.TabIndex = 1;
             this.InVehiclePB.TabStop = false;
+            this.InVehiclePB.Click += new System.EventHandler(this.InVehiclePB_Click_1);
             // 
             // OutputCameraPB
             // 
@@ -107,14 +108,15 @@
             this.OutVehiclePB.TabIndex = 3;
             this.OutVehiclePB.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBox_BiensoVAO
             // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Location = new System.Drawing.Point(11, 40);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(104, 67);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox_BiensoVAO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_BiensoVAO.Location = new System.Drawing.Point(15, 40);
+            this.pictureBox_BiensoVAO.Name = "pictureBox_BiensoVAO";
+            this.pictureBox_BiensoVAO.Size = new System.Drawing.Size(104, 67);
+            this.pictureBox_BiensoVAO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_BiensoVAO.TabIndex = 4;
+            this.pictureBox_BiensoVAO.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -128,35 +130,59 @@
             // pictureBox7
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox7.Location = new System.Drawing.Point(266, 40);
+            this.pictureBox7.Location = new System.Drawing.Point(284, 40);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(104, 67);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox8
+            // pictureBox_BiensoRA
             // 
-            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox8.Location = new System.Drawing.Point(138, 40);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(104, 67);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox_BiensoRA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_BiensoRA.Location = new System.Drawing.Point(125, 40);
+            this.pictureBox_BiensoRA.Name = "pictureBox_BiensoRA";
+            this.pictureBox_BiensoRA.Size = new System.Drawing.Size(104, 67);
+            this.pictureBox_BiensoRA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_BiensoRA.TabIndex = 7;
+            this.pictureBox_BiensoRA.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.text_BiensoVAO);
+            this.panel1.Controls.Add(this.text_BiensoRA);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox11);
-            this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox_BiensoRA);
+            this.panel1.Controls.Add(this.pictureBox_BiensoVAO);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Location = new System.Drawing.Point(754, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 264);
             this.panel1.TabIndex = 8;
+            // 
+            // text_BiensoVAO
+            // 
+            this.text_BiensoVAO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.text_BiensoVAO.BackColor = System.Drawing.SystemColors.Menu;
+            this.text_BiensoVAO.Enabled = false;
+            this.text_BiensoVAO.Location = new System.Drawing.Point(59, 135);
+            this.text_BiensoVAO.Multiline = true;
+            this.text_BiensoVAO.Name = "text_BiensoVAO";
+            this.text_BiensoVAO.Size = new System.Drawing.Size(108, 50);
+            this.text_BiensoVAO.TabIndex = 11;
+            this.text_BiensoVAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // text_BiensoRA
+            // 
+            this.text_BiensoRA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.text_BiensoRA.BackColor = System.Drawing.SystemColors.Menu;
+            this.text_BiensoRA.Enabled = false;
+            this.text_BiensoRA.Location = new System.Drawing.Point(343, 135);
+            this.text_BiensoRA.Multiline = true;
+            this.text_BiensoRA.Name = "text_BiensoRA";
+            this.text_BiensoRA.Size = new System.Drawing.Size(108, 50);
+            this.text_BiensoRA.TabIndex = 11;
             // 
             // textBox1
             // 
@@ -169,24 +195,6 @@
             this.textBox1.Size = new System.Drawing.Size(108, 50);
             this.textBox1.TabIndex = 11;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox11.Location = new System.Drawing.Point(333, 135);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox9.Location = new System.Drawing.Point(77, 135);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -196,16 +204,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(313, 32);
             this.dateTimePicker1.TabIndex = 9;
             // 
-            // label1
+            // LBSystemClock
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1031, 424);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 55);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "00:00:00";
+            this.LBSystemClock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LBSystemClock.AutoSize = true;
+            this.LBSystemClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBSystemClock.Location = new System.Drawing.Point(1004, 432);
+            this.LBSystemClock.Name = "LBSystemClock";
+            this.LBSystemClock.Size = new System.Drawing.Size(212, 55);
+            this.LBSystemClock.TabIndex = 10;
+            this.LBSystemClock.Text = "00:00:00";
             // 
             // label2
             // 
@@ -309,7 +317,7 @@
             // btnConfig
             // 
             this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfig.Location = new System.Drawing.Point(1053, 12);
+            this.btnConfig.Location = new System.Drawing.Point(1053, 14);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(84, 31);
             this.btnConfig.TabIndex = 27;
@@ -334,9 +342,9 @@
             this.ScanCamLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScanCamLB.Location = new System.Drawing.Point(625, 327);
             this.ScanCamLB.Name = "ScanCamLB";
-            this.ScanCamLB.Size = new System.Drawing.Size(175, 25);
+            this.ScanCamLB.Size = new System.Drawing.Size(115, 25);
             this.ScanCamLB.TabIndex = 22;
-            this.ScanCamLB.Text = "Camera scan thẻ";
+            this.ScanCamLB.Text = "Ảnh thẻ xe";
             // 
             // ScanCamTimer
             // 
@@ -344,13 +352,18 @@
             // 
             // StartScanCodeBut
             // 
-            this.StartScanCodeBut.Location = new System.Drawing.Point(1143, 12);
+            this.StartScanCodeBut.Location = new System.Drawing.Point(1143, 14);
             this.StartScanCodeBut.Name = "StartScanCodeBut";
             this.StartScanCodeBut.Size = new System.Drawing.Size(121, 31);
             this.StartScanCodeBut.TabIndex = 28;
             this.StartScanCodeBut.Text = "Start Scan Code";
             this.StartScanCodeBut.UseVisualStyleBackColor = true;
             this.StartScanCodeBut.Click += new System.EventHandler(this.StartScanCodeBut_Click);
+            // 
+            // SystemClock
+            // 
+            this.SystemClock.Interval = 1000;
+            this.SystemClock.Tick += new System.EventHandler(this.SystemClock_Tick);
             // 
             // MainForm
             // 
@@ -369,7 +382,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBSystemClock);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.OutVehiclePB);
@@ -386,14 +399,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.InVehiclePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputCameraPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutVehiclePB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BiensoVAO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BiensoRA)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScanCameraPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -406,16 +417,14 @@
         private System.Windows.Forms.PictureBox InVehiclePB;
         private System.Windows.Forms.PictureBox OutputCameraPB;
         private System.Windows.Forms.PictureBox OutVehiclePB;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox_BiensoVAO;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox_BiensoRA;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBSystemClock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -430,5 +439,8 @@
         private System.Windows.Forms.Label ScanCamLB;
         private System.Windows.Forms.Timer ScanCamTimer;
         private System.Windows.Forms.Button StartScanCodeBut;
+        private System.Windows.Forms.TextBox text_BiensoVAO;
+        private System.Windows.Forms.TextBox text_BiensoRA;
+        private System.Windows.Forms.Timer SystemClock;
     }
 }

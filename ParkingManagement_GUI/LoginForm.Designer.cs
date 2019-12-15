@@ -35,18 +35,16 @@
             this.PasswordTxb = new System.Windows.Forms.TextBox();
             this.UserNameTxb = new System.Windows.Forms.TextBox();
             this.LoginHeaderImage = new System.Windows.Forms.PictureBox();
-            this.LoginScreenMainImg = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNamePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginHeaderImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginScreenMainImg)).BeginInit();
             this.SuspendLayout();
             // 
             // PasswordPB
             // 
             this.PasswordPB.Image = ((System.Drawing.Image)(resources.GetObject("PasswordPB.Image")));
-            this.PasswordPB.Location = new System.Drawing.Point(465, 262);
+            this.PasswordPB.Location = new System.Drawing.Point(56, 223);
             this.PasswordPB.Name = "PasswordPB";
             this.PasswordPB.Size = new System.Drawing.Size(38, 31);
             this.PasswordPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +54,7 @@
             // UserNamePB
             // 
             this.UserNamePB.Image = ((System.Drawing.Image)(resources.GetObject("UserNamePB.Image")));
-            this.UserNamePB.Location = new System.Drawing.Point(465, 205);
+            this.UserNamePB.Location = new System.Drawing.Point(56, 166);
             this.UserNamePB.Name = "UserNamePB";
             this.UserNamePB.Size = new System.Drawing.Size(38, 31);
             this.UserNamePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,8 +65,9 @@
             // 
             this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
             this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginButton.Location = new System.Drawing.Point(534, 332);
+            this.LoginButton.Location = new System.Drawing.Point(116, 284);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(139, 58);
             this.LoginButton.TabIndex = 13;
@@ -79,7 +78,7 @@
             // 
             this.PasswordTxb.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxb.ForeColor = System.Drawing.Color.DarkGray;
-            this.PasswordTxb.Location = new System.Drawing.Point(503, 262);
+            this.PasswordTxb.Location = new System.Drawing.Point(94, 223);
             this.PasswordTxb.Name = "PasswordTxb";
             this.PasswordTxb.Size = new System.Drawing.Size(203, 31);
             this.PasswordTxb.TabIndex = 12;
@@ -91,7 +90,7 @@
             // 
             this.UserNameTxb.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameTxb.ForeColor = System.Drawing.Color.DarkGray;
-            this.UserNameTxb.Location = new System.Drawing.Point(503, 205);
+            this.UserNameTxb.Location = new System.Drawing.Point(94, 166);
             this.UserNameTxb.Name = "UserNameTxb";
             this.UserNameTxb.Size = new System.Drawing.Size(203, 31);
             this.UserNameTxb.TabIndex = 11;
@@ -102,7 +101,7 @@
             // LoginHeaderImage
             // 
             this.LoginHeaderImage.Image = ((System.Drawing.Image)(resources.GetObject("LoginHeaderImage.Image")));
-            this.LoginHeaderImage.Location = new System.Drawing.Point(550, 58);
+            this.LoginHeaderImage.Location = new System.Drawing.Point(133, 23);
             this.LoginHeaderImage.Name = "LoginHeaderImage";
             this.LoginHeaderImage.Size = new System.Drawing.Size(100, 100);
             this.LoginHeaderImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,26 +109,15 @@
             this.LoginHeaderImage.TabStop = false;
             this.LoginHeaderImage.Click += new System.EventHandler(this.LoginHeaderImage_Click);
             // 
-            // LoginScreenMainImg
-            // 
-            this.LoginScreenMainImg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LoginScreenMainImg.Image = ((System.Drawing.Image)(resources.GetObject("LoginScreenMainImg.Image")));
-            this.LoginScreenMainImg.InitialImage = null;
-            this.LoginScreenMainImg.Location = new System.Drawing.Point(0, 0);
-            this.LoginScreenMainImg.Name = "LoginScreenMainImg";
-            this.LoginScreenMainImg.Size = new System.Drawing.Size(367, 450);
-            this.LoginScreenMainImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LoginScreenMainImg.TabIndex = 9;
-            this.LoginScreenMainImg.TabStop = false;
-            this.LoginScreenMainImg.Click += new System.EventHandler(this.LoginScreenMainImg_Click);
-            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(713, 415);
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(327, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(38, 38);
             this.btnExit.TabIndex = 16;
-            this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -137,7 +125,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(365, 367);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.PasswordPB);
             this.Controls.Add(this.UserNamePB);
@@ -145,7 +134,6 @@
             this.Controls.Add(this.PasswordTxb);
             this.Controls.Add(this.UserNameTxb);
             this.Controls.Add(this.LoginHeaderImage);
-            this.Controls.Add(this.LoginScreenMainImg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -154,7 +142,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PasswordPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNamePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginHeaderImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginScreenMainImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +155,6 @@
         private System.Windows.Forms.TextBox PasswordTxb;
         private System.Windows.Forms.TextBox UserNameTxb;
         private System.Windows.Forms.PictureBox LoginHeaderImage;
-        private System.Windows.Forms.PictureBox LoginScreenMainImg;
         private System.Windows.Forms.Button btnExit;
     }
 }
