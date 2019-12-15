@@ -135,12 +135,15 @@ namespace ParkingManagement_GUI
         { 
             try
             {
-                DialogResult DelData = MessageBox.Show("Bạn có muốn xóa thông tin nhân viên này?", "Thông báo", MessageBoxButtons.YesNo); //Hiện thông báo xác nhận xóa
-                if (DelData == DialogResult.Yes) //nếu chọn yes thì sẽ execute lệnh bên dưới để xóa
+                if (MessageBox.Show
+                 ("Bạn có chắc chắn muốn xóa thông tin này. CÁC DỮ LIỆU LIÊN QUAN ĐẾN MÃ LOẠI SẢN PHẨM NÀY SẼ ĐỀU BỊ XÓA",
+                  "Thông báo",
+                  MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
                 {
                     info_BUS.Delete(id);
                     account_BUS.DeleteAccount(id);
-                    MessageBox.Show("Xác nhận thao tác thành công!");
+                    MessageBox.Show("Xác nhận thao tác thành công");
+                    showAllAccountInfo();
                 }
             }
             catch(Exception)

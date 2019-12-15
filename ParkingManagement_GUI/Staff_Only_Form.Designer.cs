@@ -95,6 +95,7 @@
             this.priceEdit_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.priceEdit_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.priceEdit_Btn.UseVisualStyleBackColor = false;
+            this.priceEdit_Btn.Click += new System.EventHandler(this.priceEdit_Btn_Click);
             // 
             // Staff_Btn
             // 

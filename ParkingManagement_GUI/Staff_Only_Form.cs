@@ -19,6 +19,8 @@ namespace ParkingManagement_GUI
         }
         UC_StaffMana StaffManage = new UC_StaffMana();
         UC_Note Note = new UC_Note();
+        UC_PriceEdit priceEdit = new UC_PriceEdit();
+        UC_Analytics analytics = new UC_Analytics();
         public void admin_and_other()
         {
             if (Account_Type == 1)
@@ -66,6 +68,12 @@ namespace ParkingManagement_GUI
             
             Staff_acti_Panel.Controls.Clear();
             Staff_acti_Panel.Controls.Add(StaffManage);
+        }
+
+        private void priceEdit_Btn_Click(object sender, EventArgs e)
+        {
+            Staff_acti_Panel.Controls.Clear();
+            Staff_acti_Panel.Controls.Add(priceEdit);
         }
     }
 }

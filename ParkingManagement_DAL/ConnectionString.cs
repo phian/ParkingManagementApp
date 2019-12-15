@@ -10,7 +10,7 @@ namespace ParkingManagement_DAL
     public class ConnectionString
     {
         // Đường dẫn database
-        public static string connectionString = "Data Source=" + Dns.GetHostName() + ";Initial Catalog=PARKINGMANAGE;Integrated Security=True";
+        public static string connectionString = "Data Source=" + Dns.GetHostName() + ";Initial Catalog=PARKINGMANA;Integrated Security=True";
         public SqlConnection GetConnect()
         {
             return new SqlConnection(connectionString);
